@@ -172,7 +172,10 @@
       .replace(/^-|-$/g, '')
       + '-' + month + '-' + year;
 
-    return { company, slug };
+    const dealIdMatch = html.match(/<meta\s+name=["']deal-id["']\s+content=["'](\d+)["']/);
+    const dealId = dealIdMatch ? dealIdMatch[1] : null;
+
+    return { company, slug, dealId };
   }
 
   htmlInput.addEventListener('input', () => {
@@ -218,7 +221,7 @@
       const resp = await fetch('https://risecap.app.n8n.cloud/webhook/publish-options', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ html, slug: parsed.slug, company: parsed.company })
+        body: JSON.stringify({ html, slug: parsed.slug, company: parsed.company, dealId: parsed.dealId })
       });
 
       const data = await resp.json();
