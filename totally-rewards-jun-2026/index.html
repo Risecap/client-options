@@ -1,3 +1,19 @@
+<!--
+  Risecap Client Options Template
+  Placeholders (wrapped in double curly braces when used in the markup below):
+    COMPANY_NAME         - client company name (title + header)
+    HEADER_BODY          - intro paragraph in the purple header
+    GGS_NOTE             - optional one-liner re GGS / grant context (omit when empty)
+    AMOUNT_PILL          - funding amount badge content
+    LENDER_CARDS         - primary shortlist lender cards
+    BACKUP_LENDER_CARDS  - secondary "also exploring" lender cards
+    EXPECT_STEPS         - numbered next-steps items
+    DOC_ITEMS            - document checklist grid items
+    WHY_BODY             - "why we approached it this way" copy
+    CONSULTANT_NAME      - consultant full name
+    CONSULTANT_INITIALS  - consultant initials for avatar
+    GENERATED_DATE       - date string for footer
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -60,9 +76,12 @@
   .page { max-width: 720px; margin: 0 auto; background: var(--offwhite); }
   .header-wrap { background: var(--purple); }
   .header-inner { max-width: 720px; margin: 0 auto; }
+  .ggs-note { color: rgba(255,252,248,0.8); font-weight: 500; }
 
-
-  .header { padding: 40px 48px 36px; }
+  /* -- HEADER -- */
+  .header {
+    padding: 40px 48px 36px;
+  }
   .brand {
     font-family: 'Feature Mono', 'IBM Plex Mono', monospace;
     font-size: 10px;
@@ -72,9 +91,26 @@
     margin-bottom: 20px;
     opacity: 0.8;
   }
-  .header-intro { font-size: 13px; color: rgba(255,252,248,0.55); margin-bottom: 6px; font-style: italic; }
-  .header-title { font-size: 28px; font-weight: 600; color: var(--offwhite); letter-spacing: -0.02em; line-height: 1.2; margin-bottom: 14px; }
-  .header-body { font-size: 14px; color: rgba(255,252,248,0.65); line-height: 1.65; max-width: 520px; }
+  .header-intro {
+    font-size: 13px;
+    color: rgba(255,252,248,0.55);
+    margin-bottom: 6px;
+    font-style: italic;
+  }
+  .header-title {
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--offwhite);
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    margin-bottom: 14px;
+  }
+  .header-body {
+    font-size: 14px;
+    color: rgba(255,252,248,0.65);
+    line-height: 1.65;
+    max-width: 520px;
+  }
   .header-body strong { color: rgba(255,252,248,0.9); font-weight: 500; }
 
   .amount-pill {
@@ -92,10 +128,16 @@
   }
 
 
-
+  /* -- MAIN -- */
   .main { padding: 36px 48px 48px; }
 
-  .section-head { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; margin-top: 36px; }
+  .section-head {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+    margin-top: 36px;
+  }
   .section-head:first-child { margin-top: 0; }
   .section-title {
     font-family: 'Feature Mono', 'IBM Plex Mono', monospace;
@@ -108,9 +150,24 @@
   }
   .section-line { flex: 1; height: 1px; background: var(--border); }
 
+  /* -- LENDER CARDS -- */
   .lenders { display: flex; flex-direction: column; gap: 14px; margin-bottom: 8px; }
 
-  .lender-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+  .backup-label {
+    font-family: 'Feature Mono', monospace;
+    font-size: 10px;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin: 28px 0 14px;
+  }
+
+  .lender-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+  }
 
   .lc-head {
     padding: 20px 24px 16px;
@@ -122,6 +179,7 @@
   }
   .lc-name { font-size: 16px; font-weight: 600; color: var(--purple); letter-spacing: -0.01em; margin-bottom: 3px; }
   .lc-type { font-size: 12px; color: var(--text-dim); }
+
   .lc-badges { display: flex; gap: 6px; flex-wrap: wrap; justify-content: flex-end; flex-shrink: 0; }
   .badge {
     font-size: 10px;
@@ -135,77 +193,159 @@
   }
   .badge-green { background: var(--green-bg); color: var(--green); }
   .badge-purple { background: #EEEDFE; color: #4338CA; }
+  /* badge-amber is used for GGS, revenue-based, and "also exploring" labels */
   .badge-amber { background: var(--amber-bg); color: var(--amber); }
 
   .lc-body { padding: 16px 24px 20px; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
-  .lc-stat-label { font-size: 11px; color: var(--text-dim); margin-bottom: 3px; font-family: 'Feature Mono', 'IBM Plex Mono', monospace; letter-spacing: 0.04em; }
+
+  .lc-stat-label {
+    font-size: 11px;
+    color: var(--text-dim);
+    margin-bottom: 3px;
+    font-family: 'Feature Mono', 'IBM Plex Mono', monospace;
+    letter-spacing: 0.04em;
+  }
   .lc-stat-value { font-size: 15px; font-weight: 500; color: var(--purple); }
   .lc-stat-note { font-size: 11px; color: var(--text-dim); margin-top: 2px; }
 
-  .lc-pitch { font-size: 13px; color: var(--text-muted); line-height: 1.6; background: #FAFAF8; padding: 14px 24px 18px; border-top: 1px solid var(--border); }
-
-  .backup-label {
-    font-family: 'Feature Mono', 'IBM Plex Mono', monospace;
-    font-size: 10px;
-    color: var(--text-dim);
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    margin: 28px 0 14px;
+  .lc-pitch {
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.6;
+    background: #FAFAF8;
+    padding: 14px 24px 18px;
+    border-top: 1px solid var(--border);
   }
 
+  /* -- WHAT TO EXPECT -- */
   .expect-list { display: flex; flex-direction: column; gap: 0; border: 1px solid var(--border); border-radius: 12px; overflow: hidden; background: var(--surface); }
-  .expect-step { display: flex; gap: 16px; padding: 18px 22px; border-bottom: 1px solid var(--border); align-items: flex-start; }
+  .expect-step {
+    display: flex;
+    gap: 16px;
+    padding: 18px 22px;
+    border-bottom: 1px solid var(--border);
+    align-items: flex-start;
+  }
   .expect-step:last-child { border-bottom: none; }
   .expect-num {
-    width: 26px; height: 26px; border-radius: 50%; background: var(--purple); color: var(--yellow);
-    font-family: 'Feature Mono', 'IBM Plex Mono', monospace; font-size: 11px;
-    display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: var(--purple);
+    color: var(--yellow);
+    font-family: 'Feature Mono', 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 1px;
   }
   .expect-title { font-size: 14px; font-weight: 500; color: var(--purple); margin-bottom: 4px; }
   .expect-desc { font-size: 13px; color: var(--text-muted); line-height: 1.55; }
 
-  .docs-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  /* -- DOCS NEEDED -- */
+  .docs-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
   .doc-item {
-    background: var(--surface); border: 1px solid var(--border); border-radius: 8px;
-    padding: 12px 16px; display: flex; align-items: center; gap: 10px;
-    font-size: 13px; color: var(--purple);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    color: var(--purple);
   }
   .doc-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--yellow); border: 1px solid var(--purple); flex-shrink: 0; }
 
-  .why-box { background: var(--purple); border-radius: 12px; padding: 28px 30px; margin-top: 36px; }
+  /* -- WHY RISECAP -- */
+  .why-box {
+    background: var(--purple);
+    border-radius: 12px;
+    padding: 28px 30px;
+    margin-top: 36px;
+  }
   .why-title { font-size: 16px; font-weight: 500; color: var(--offwhite); margin-bottom: 10px; }
   .why-body { font-size: 13px; color: rgba(255,252,248,0.65); line-height: 1.7; }
   .why-body strong { color: rgba(255,252,248,0.9); font-weight: 500; }
 
+  /* -- CONTACT -- */
   .contact {
-    margin-top: 28px; padding: 22px 24px;
-    background: var(--surface); border: 1px solid var(--border); border-radius: 12px;
-    display: flex; justify-content: space-between; align-items: center; gap: 16px;
+    margin-top: 28px;
+    padding: 22px 24px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
   }
   .contact-name { font-size: 15px; font-weight: 600; color: var(--purple); margin-bottom: 2px; }
   .contact-role { font-size: 12px; color: var(--text-dim); margin-bottom: 8px; }
   .contact-detail { font-size: 13px; color: var(--text-muted); line-height: 1.6; }
   .contact-detail a { color: var(--purple); font-weight: 500; text-decoration: none; }
   .contact-avatar {
-    width: 52px; height: 52px; border-radius: 50%; background: var(--yellow);
-    display: flex; align-items: center; justify-content: center;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: var(--yellow);
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-family: 'Feature Mono', 'IBM Plex Mono', monospace;
-    font-size: 16px; font-weight: 500; color: var(--purple); flex-shrink: 0;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--purple);
+    flex-shrink: 0;
   }
 
-  .footer { background: var(--purple); margin-top: 0; }
+  /* -- FOOTER -- */
+  .footer {
+    background: var(--purple);
+    margin-top: 0;
+  }
   .footer-inner {
-    max-width: 720px; margin: 0 auto; padding: 20px 48px;
-    display: flex; justify-content: space-between; align-items: center; gap: 16px;
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 20px 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
   }
-  .footer-brand { font-family: 'Feature Mono', 'IBM Plex Mono', monospace; font-size: 10px; color: rgba(255,252,248,0.35); letter-spacing: 0.1em; text-transform: uppercase; }
-  .footer-disclaimer { font-size: 11px; color: rgba(255,252,248,0.25); line-height: 1.5; text-align: right; max-width: 360px; }
-  .generated-date { font-size: 10px; color: rgba(255,252,248,0.2); text-align: center; padding: 8px 48px; background: var(--purple); font-family: 'Feature Mono', 'IBM Plex Mono', monospace; }
+  .footer-brand {
+    font-family: 'Feature Mono', 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    color: rgba(255,252,248,0.35);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  .footer-disclaimer {
+    font-size: 11px;
+    color: rgba(255,252,248,0.25);
+    line-height: 1.5;
+    text-align: right;
+    max-width: 360px;
+  }
+  .generated-date {
+    font-size: 10px;
+    color: rgba(255,252,248,0.2);
+    text-align: center;
+    padding: 8px 48px;
+    background: var(--purple);
+    font-family: 'Feature Mono', 'IBM Plex Mono', monospace;
+  }
 
+  /* -- MOBILE -- */
   @media (max-width: 600px) {
     .header { padding: 28px 24px 28px; }
     .header-title { font-size: 22px; }
-    .intro { padding: 24px 24px 20px; }
     .main { padding: 28px 24px 36px; }
     .lc-head { flex-direction: column; gap: 10px; }
     .lc-badges { justify-content: flex-start; }
@@ -218,8 +358,7 @@
 </style>
 </head>
 <body>
-
-<!-- HEADER -->
+<!-- HEADER (full-width) -->
 <div class="header-wrap">
   <div class="header-inner">
     <div class="header">
@@ -227,31 +366,29 @@
       <div class="header-intro">Prepared for Totally Rewards Limited</div>
       <div class="header-title">Here's what we've found for you.</div>
       <div class="header-body">
-        We've reviewed your business profile and spoken with a range of lenders on your behalf.
-        Based on your current trading, your management accounts to March 2026, and your growth trajectory,
-        we've put together a shortlist of the most suitable options - covering both
-        <strong>term loans</strong> and <strong>revenue-based facilities</strong>.
-        All rates below are indicative and subject to full lender assessment.
+        We have reviewed your business and approached a range of lenders on your behalf. Your management accounts to March 2026 show <strong>over &#163;1 million in turnover and a profitable EBITDA</strong> - that is the story we are leading with. We are approaching lenders across term loan and revenue-based routes, and have requested Growth Guarantee Scheme terms where eligible.
+        <span class="ggs-note">Growth Guarantee Scheme terms requested from eligible lenders on this list.</span>
       </div>
-      <div class="amount-pill">&#163;250,000 - Working capital &amp; growth</div>
+      <div class="amount-pill">
+        &#163;250,000 - Working capital and growth
+      </div>
     </div>
   </div>
 </div>
 
-
-
 <div class="page">
+
+  <!-- MAIN -->
   <div class="main">
 
-    <!-- LENDER CARDS -->
+    <!-- LENDERS -->
     <div class="section-head">
       <span class="section-title">Your shortlist</span>
       <div class="section-line"></div>
     </div>
 
     <div class="lenders">
-
-      <!-- Funding Circle -->
+      
       <div class="lender-card">
         <div class="lc-head">
           <div>
@@ -267,24 +404,23 @@
         <div class="lc-body">
           <div>
             <div class="lc-stat-label">Indicative rate</div>
-            <div class="lc-stat-value">6.9% &ndash; 24.6%</div>
+            <div class="lc-stat-value">6.9% - 24.6%</div>
             <div class="lc-stat-note">per annum</div>
           </div>
           <div>
             <div class="lc-stat-label">Facility size</div>
-            <div class="lc-stat-value">Up to &#163;500k</div>
+            <div class="lc-stat-value">Up to &#163;750k</div>
             <div class="lc-stat-note">unsecured</div>
           </div>
           <div>
             <div class="lc-stat-label">Decision speed</div>
-            <div class="lc-stat-value">2&ndash;5 days</div>
+            <div class="lc-stat-value">2 - 5 days</div>
             <div class="lc-stat-note">typical</div>
           </div>
         </div>
-        <div class="lc-pitch">One of the UK's leading business lenders. We've submitted successfully here many times for businesses at your stage. They'll look at your current trading performance and the growth you've achieved - that's where your case is strongest. <strong>We are requesting Growth Guarantee Scheme terms from Funding Circle as part of this submission.</strong></div>
+        <div class="lc-pitch">One of the UK's leading business lenders. We are requesting Growth Guarantee Scheme terms as part of this submission, which can improve both the rate and the likelihood of a positive decision. They will assess your current trading performance - that is where your case is strongest.</div>
       </div>
 
-      <!-- Shawbrook -->
       <div class="lender-card">
         <div class="lc-head">
           <div>
@@ -300,7 +436,7 @@
         <div class="lc-body">
           <div>
             <div class="lc-stat-label">Indicative rate</div>
-            <div class="lc-stat-value">10.0% &ndash; 15.0%</div>
+            <div class="lc-stat-value">10.0% - 15.0%</div>
             <div class="lc-stat-note">per annum</div>
           </div>
           <div>
@@ -310,19 +446,18 @@
           </div>
           <div>
             <div class="lc-stat-label">Decision speed</div>
-            <div class="lc-stat-value">3&ndash;7 days</div>
+            <div class="lc-stat-value">3 - 7 days</div>
             <div class="lc-stat-note">typical</div>
           </div>
         </div>
-        <div class="lc-pitch">A specialist bank with a focused unsecured lending product for established businesses. Strong fit for B2B technology companies with a clear revenue trajectory. Competitive rate band for the right profile. <strong>We are requesting Growth Guarantee Scheme terms from Shawbrook as part of this submission.</strong></div>
+        <div class="lc-pitch">A specialist bank with a focused unsecured product for established businesses. We are requesting Growth Guarantee Scheme terms here too. Strong fit for B2B technology companies with a clear revenue trajectory.</div>
       </div>
 
-      <!-- BCRS -->
       <div class="lender-card">
         <div class="lc-head">
           <div>
             <div class="lc-name">BCRS Business Loans</div>
-            <div class="lc-type">Unsecured Term Loan - CDFI</div>
+            <div class="lc-type">Unsecured Term Loan - Community Lender</div>
           </div>
           <div class="lc-badges">
             <span class="badge badge-green">Main</span>
@@ -332,7 +467,7 @@
         <div class="lc-body">
           <div>
             <div class="lc-stat-label">Indicative rate</div>
-            <div class="lc-stat-value">12.0% &ndash; 16.0%</div>
+            <div class="lc-stat-value">12.0% - 16.0%</div>
             <div class="lc-stat-note">per annum</div>
           </div>
           <div>
@@ -342,14 +477,13 @@
           </div>
           <div>
             <div class="lc-stat-label">Decision speed</div>
-            <div class="lc-stat-value">5&ndash;10 days</div>
+            <div class="lc-stat-value">5 - 10 days</div>
             <div class="lc-stat-note">typical</div>
           </div>
         </div>
-        <div class="lc-pitch">A community development lender (CDFI) with a different approach to underwriting. They look at the full picture - including growth trajectory and business purpose - rather than purely historical financials. Your story from &#163;244k to &#163;1m+ is exactly the kind of journey they lend into.</div>
+        <div class="lc-pitch">A community development lender with a different approach to underwriting. They look at growth trajectory and business purpose, not just historic financials. Your journey from &#163;244k to &#163;1m+ turnover is exactly the kind of story they lend into.</div>
       </div>
 
-      <!-- Outfund -->
       <div class="lender-card">
         <div class="lc-head">
           <div>
@@ -364,7 +498,7 @@
         <div class="lc-body">
           <div>
             <div class="lc-stat-label">Indicative rate</div>
-            <div class="lc-stat-value">9.6% &ndash; 18.0%</div>
+            <div class="lc-stat-value">9.6% - 18.0%</div>
             <div class="lc-stat-note">per annum equiv.</div>
           </div>
           <div>
@@ -374,21 +508,17 @@
           </div>
           <div>
             <div class="lc-stat-label">Decision speed</div>
-            <div class="lc-stat-value">2&ndash;5 days</div>
+            <div class="lc-stat-value">2 - 5 days</div>
             <div class="lc-stat-note">bank-statement led</div>
           </div>
         </div>
-        <div class="lc-pitch">Outfund underwrites primarily on your current revenue and bank performance rather than filed accounts - which plays directly to Totally's strength. Your recurring B2B invoice model and international client base are a natural fit for their product.</div>
+        <div class="lc-pitch">Outfund underwrites on current revenue and bank performance rather than filed accounts - which plays directly to your strengths. Your recurring B2B invoice model and international client base are a natural fit for their product.</div>
       </div>
+    </div>
 
-    </div><!-- end main lenders -->
-
-    <!-- BACKUP LENDERS -->
-    <div class="backup-label">Also being explored</div>
-
+    <div class="backup-label">Also exploring</div>
     <div class="lenders">
-
-      <!-- Iwoca -->
+      
       <div class="lender-card">
         <div class="lc-head">
           <div>
@@ -402,25 +532,24 @@
         </div>
         <div class="lc-body">
           <div>
-            <div class="lc-stat-label">Indicative rate</div>
-            <div class="lc-stat-value">12.0% &ndash; 61.8%</div>
-            <div class="lc-stat-note">per annum</div>
-          </div>
-          <div>
             <div class="lc-stat-label">Current balance</div>
             <div class="lc-stat-value">&#163;334k</div>
             <div class="lc-stat-note">outstanding</div>
           </div>
           <div>
+            <div class="lc-stat-label">Indicative rate</div>
+            <div class="lc-stat-value">12.0% - 61.8%</div>
+            <div class="lc-stat-note">per annum</div>
+          </div>
+          <div>
             <div class="lc-stat-label">Decision speed</div>
-            <div class="lc-stat-value">1&ndash;3 days</div>
+            <div class="lc-stat-value">1 - 3 days</div>
             <div class="lc-stat-note">existing relationship</div>
           </div>
         </div>
-        <div class="lc-pitch">Iwoca already know your business. We're exploring whether a top-up or restructure of your existing facility is possible - this could simplify your repayment position and may be the quickest route to the capital you need. We'll have a clear answer here early in the process.</div>
+        <div class="lc-pitch">Iwoca already know your business. We are exploring whether a top-up or restructure of your existing facility is possible - this could simplify your repayment position and may be the quickest route to the capital you need.</div>
       </div>
 
-      <!-- Wayflyer -->
       <div class="lender-card">
         <div class="lc-head">
           <div>
@@ -435,7 +564,7 @@
         <div class="lc-body">
           <div>
             <div class="lc-stat-label">Indicative rate</div>
-            <div class="lc-stat-value">8.0% &ndash; 20.0%</div>
+            <div class="lc-stat-value">8.0% - 20.0%</div>
             <div class="lc-stat-note">per annum equiv.</div>
           </div>
           <div>
@@ -445,14 +574,13 @@
           </div>
           <div>
             <div class="lc-stat-label">Decision speed</div>
-            <div class="lc-stat-value">2&ndash;5 days</div>
-            <div class="lc-stat-note">bank-statement led</div>
+            <div class="lc-stat-value">2 - 5 days</div>
+            <div class="lc-stat-note">typical</div>
           </div>
         </div>
-        <div class="lc-pitch">A strong performer for B2B businesses with recurring digital revenue and international reach. Wayflyer look closely at your bank inflows and trading patterns - exactly the picture we'd want to present for Totally.</div>
+        <div class="lc-pitch">Strong performer for B2B businesses with recurring digital revenue and international reach. Wayflyer look at your bank inflows and trading patterns - exactly the picture we would want to present for Totally.</div>
       </div>
 
-      <!-- Uncapped -->
       <div class="lender-card">
         <div class="lc-head">
           <div>
@@ -467,7 +595,7 @@
         <div class="lc-body">
           <div>
             <div class="lc-stat-label">Indicative rate</div>
-            <div class="lc-stat-value">8.4% &ndash; 15.6%</div>
+            <div class="lc-stat-value">8.4% - 15.6%</div>
             <div class="lc-stat-note">per annum equiv.</div>
           </div>
           <div>
@@ -477,14 +605,13 @@
           </div>
           <div>
             <div class="lc-stat-label">Decision speed</div>
-            <div class="lc-stat-value">3&ndash;7 days</div>
+            <div class="lc-stat-value">3 - 7 days</div>
             <div class="lc-stat-note">typical</div>
           </div>
         </div>
-        <div class="lc-pitch">Specialist in recurring-revenue businesses. Competitive rate band and a clean, fast process. We're including them as an additional option to ensure you have the broadest picture of what's available.</div>
+        <div class="lc-pitch">Specialist in recurring-revenue businesses. Competitive rate band and a fast process. We are including them to ensure you have the broadest picture of what is available.</div>
       </div>
 
-      <!-- Lending Crowd -->
       <div class="lender-card">
         <div class="lc-head">
           <div>
@@ -499,24 +626,23 @@
         <div class="lc-body">
           <div>
             <div class="lc-stat-label">Indicative rate</div>
-            <div class="lc-stat-value">5.2% &ndash; 20.0%</div>
+            <div class="lc-stat-value">5.2% - 20.0%</div>
             <div class="lc-stat-note">per annum</div>
           </div>
           <div>
             <div class="lc-stat-label">Facility size</div>
-            <div class="lc-stat-value">&#163;75k &ndash; &#163;500k</div>
+            <div class="lc-stat-value">&#163;75k - &#163;500k</div>
             <div class="lc-stat-note">unsecured</div>
           </div>
           <div>
             <div class="lc-stat-label">Decision speed</div>
-            <div class="lc-stat-value">5&ndash;10 days</div>
+            <div class="lc-stat-value">5 - 10 days</div>
             <div class="lc-stat-note">typical</div>
           </div>
         </div>
-        <div class="lc-pitch">A peer-to-peer lender with one of the most competitive rate bands in the market. We're soft-testing appetite with them given your current trading profile. If they're comfortable with your management accounts picture, the rate could be very attractive.</div>
+        <div class="lc-pitch">Peer-to-peer lender with one of the most competitive rate bands on the market. We are soft-testing appetite with them given your current trading profile. If they are comfortable with the management accounts picture, the rate could be very attractive.</div>
       </div>
 
-      <!-- Outfund B2B -->
       <div class="lender-card">
         <div class="lc-head">
           <div>
@@ -531,7 +657,7 @@
         <div class="lc-body">
           <div>
             <div class="lc-stat-label">Indicative rate</div>
-            <div class="lc-stat-value">2.0% &ndash; 10.0%</div>
+            <div class="lc-stat-value">2.0% - 10.0%</div>
             <div class="lc-stat-note">per annum equiv.</div>
           </div>
           <div>
@@ -541,48 +667,48 @@
           </div>
           <div>
             <div class="lc-stat-label">Decision speed</div>
-            <div class="lc-stat-value">3&ndash;7 days</div>
+            <div class="lc-stat-value">3 - 7 days</div>
             <div class="lc-stat-note">typical</div>
           </div>
         </div>
-        <div class="lc-pitch">Outfund's B2B product is designed specifically for businesses with recurring corporate invoice revenue - which describes Totally well. This carries the most competitive rate of anything on this list. We're exploring this route alongside the standard Outfund product to find the best fit.</div>
+        <div class="lc-pitch">Outfund's B2B product is built for businesses with recurring corporate invoice revenue. This carries the most competitive rate on this list. We are exploring it alongside the standard Outfund product to find the best fit.</div>
       </div>
+    </div>
 
-    </div><!-- end backup lenders -->
-
-    <!-- WHAT HAPPENS NEXT -->
+    <!-- WHAT TO EXPECT -->
     <div class="section-head" style="margin-top: 40px;">
       <span class="section-title">What happens from here</span>
       <div class="section-line"></div>
     </div>
 
     <div class="expect-list">
+      
       <div class="expect-step">
         <div class="expect-num">1</div>
         <div>
           <div class="expect-title">We submit on your behalf</div>
-          <div class="expect-desc">We package your documents and submit to the lenders above simultaneously. You don't need to contact any of them directly - we manage the process end to end.</div>
+          <div class="expect-desc">We package your documents and submit to the lenders above simultaneously. You do not need to contact any of them directly.</div>
         </div>
       </div>
       <div class="expect-step">
         <div class="expect-num">2</div>
         <div>
           <div class="expect-title">Lenders come back with offers</div>
-          <div class="expect-desc">Most decisions come within 2&ndash;7 working days depending on the lender. We'll share each offer as it arrives, with a plain-English summary so you can compare them properly.</div>
+          <div class="expect-desc">Most decisions arrive within 2 to 7 working days. We will share each offer as it lands with a plain-English summary so you can compare properly.</div>
         </div>
       </div>
       <div class="expect-step">
         <div class="expect-num">3</div>
         <div>
-          <div class="expect-title">You choose - we support</div>
-          <div class="expect-desc">There's no pressure to accept anything. Once you've decided which offer works best, we'll guide you through the final steps. Funds typically land within 24&ndash;72 hours of accepting an offer.</div>
+          <div class="expect-title">You choose, we support</div>
+          <div class="expect-desc">No pressure to accept anything. Once you have decided, we guide you through the final steps. Funds typically land within 24 to 72 hours of accepting an offer.</div>
         </div>
       </div>
       <div class="expect-step">
         <div class="expect-num">4</div>
         <div>
           <div class="expect-title">We stay in touch</div>
-          <div class="expect-desc">We're here throughout. If lenders come back with questions or need additional information, we handle it. You shouldn't need to do anything other than make the final decision.</div>
+          <div class="expect-desc">If lenders come back with questions we handle it. You should not need to do anything other than make the final decision.</div>
         </div>
       </div>
     </div>
@@ -594,22 +720,19 @@
     </div>
 
     <div class="docs-grid">
+      
       <div class="doc-item"><div class="doc-dot"></div>Management accounts (to March 2026)</div>
       <div class="doc-item"><div class="doc-dot"></div>Filed accounts (most recent)</div>
       <div class="doc-item"><div class="doc-dot"></div>6 months bank statements</div>
-      <div class="doc-item"><div class="doc-dot"></div>Director ID &amp; proof of address</div>
+      <div class="doc-item"><div class="doc-dot"></div>Director ID and proof of address</div>
       <div class="doc-item"><div class="doc-dot"></div>Credit report (numeric score)</div>
       <div class="doc-item"><div class="doc-dot"></div>VAT registration confirmation</div>
     </div>
 
-    <!-- WHY -->
+    <!-- WHY RISECAP -->
     <div class="why-box">
       <div class="why-title">Why we've approached this the way we have</div>
-      <div class="why-body">
-        Your filed accounts show a period of investment and growth - and on paper they look loss-making. But your management accounts to March 2026 tell a very different story: <strong>over &#163;1 million in turnover and a profitable EBITDA</strong>. That's a 327% increase in revenue in under two years.<br><br>
-        We've focused on lenders who either look primarily at current trading rather than historic filed accounts, or who have a more holistic approach to underwriting. The lenders who rely solely on filed accounts aren't on this list because they won't give you the answer you deserve.<br><br>
-        The revenue-based options on this list are particularly well suited to Totally's model - <strong>recurring B2B invoice revenue, international clients, and strong monthly inflows</strong> are exactly the profile those lenders are built for. We expect the most competitive offers to come from that route.
-      </div>
+      <div class="why-body">Your filed accounts show a period of investment and growth - and on paper they look loss-making. But your management accounts to March 2026 tell a very different story: <strong>over &#163;1 million in turnover and a profitable EBITDA</strong>. That is a 327% increase in revenue in under two years.<br><br>We have focused on lenders who look primarily at current trading rather than historic filed accounts, and on those with a more holistic approach to underwriting. The revenue-based options are particularly well suited to Totally - <strong>recurring B2B invoice revenue, international clients, and strong monthly inflows</strong> are exactly the profile those lenders are built for. We expect the most competitive offers to come from that route.</div>
     </div>
 
     <!-- CONTACT -->
@@ -626,9 +749,10 @@
     </div>
 
   </div>
-</div>
 
-<!-- FOOTER -->
+  </div>
+
+<!-- FOOTER (full-width) -->
 <div class="footer">
   <div class="footer-inner">
     <span class="footer-brand">Risecap - Funding partners</span>
