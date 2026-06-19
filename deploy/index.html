@@ -199,7 +199,7 @@
       return;
     }
 
-    if (!html.startsWith('<!DOCTYPE') && !html.startsWith('<html') && !html.startsWith('<head')) {
+    if (!html.startsWith('<!DOCTYPE') && !html.startsWith('<html') && !html.startsWith('<head') && !html.startsWith('<!--')) {
       result.className = 'result error';
       result.textContent = 'That doesn\'t look like HTML. Make sure you paste the full page source from Claude\'s artifact.';
       return;
