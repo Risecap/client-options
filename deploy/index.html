@@ -140,15 +140,10 @@
   <h1>Deploy Client Options Page</h1>
   <p class="subtitle">Paste the HTML from Claude, click Deploy. Page goes live in about 30 seconds.</p>
 
-  <label for="company">Company name</label>
-  <input type="text" id="company" placeholder="e.g. Reciprocal Limited" autocomplete="off">
-
-  <label for="slug">Page slug</label>
-  <input type="text" id="slug" placeholder="e.g. reciprocal-jun-2026" autocomplete="off">
-  <p class="slug-preview">URL: https://options.risecap.co.uk/<span id="slug-preview-text">...</span>/</p>
-
-  <label for="html">HTML content</label>
+  <label for="html">Paste the HTML</label>
   <textarea id="html" placeholder="Paste the full HTML here (from Claude's artifact output)"></textarea>
+
+  <p class="slug-preview" id="preview-line" style="display:none">Will publish to: https://options.risecap.co.uk/<span id="slug-preview-text"></span>/</p>
 
   <button id="deploy-btn" onclick="deploy()">Deploy</button>
 
@@ -156,47 +151,48 @@
 </div>
 
 <script>
-  const slugInput = document.getElementById('slug');
-  const companyInput = document.getElementById('company');
+  const htmlInput = document.getElementById('html');
+  const previewLine = document.getElementById('preview-line');
   const previewSpan = document.getElementById('slug-preview-text');
 
-  slugInput.addEventListener('input', () => {
-    const clean = slugInput.value
-      .toLowerCase()
-      .replace(/[^a-z0-9-]/g, '-')
-      .replace(/-+/g, '-')
-      .replace(/^-|-$/g, '');
-    previewSpan.textContent = clean || '...';
-  });
+  function extractFromHtml(html) {
+    const titleMatch = html.match(/<title>[^|]*\|\s*([^|]+)\s*\|/);
+    const company = titleMatch ? titleMatch[1].trim() : null;
 
-  companyInput.addEventListener('input', () => {
-    if (!slugInput.value) {
-      const now = new Date();
-      const month = now.toLocaleString('en-GB', { month: 'short' }).toLowerCase();
-      const year = now.getFullYear();
-      const suggested = companyInput.value
-        .toLowerCase()
-        .replace(/\s+(ltd|limited|plc|llp|inc)\.?$/i, '')
-        .replace(/[^a-z0-9]+/g, '-')
-        .replace(/-+/g, '-')
-        .replace(/^-|-$/g, '');
-      if (suggested) {
-        slugInput.value = suggested + '-' + month + '-' + year;
-        slugInput.dispatchEvent(new Event('input'));
-      }
+    if (!company) return null;
+
+    const now = new Date();
+    const month = now.toLocaleString('en-GB', { month: 'short' }).toLowerCase();
+    const year = now.getFullYear();
+    const slug = company
+      .toLowerCase()
+      .replace(/\s+(ltd|limited|plc|llp|inc)\.?$/i, '')
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/-+/g, '-')
+      .replace(/^-|-$/g, '')
+      + '-' + month + '-' + year;
+
+    return { company, slug };
+  }
+
+  htmlInput.addEventListener('input', () => {
+    const parsed = extractFromHtml(htmlInput.value);
+    if (parsed) {
+      previewSpan.textContent = parsed.slug;
+      previewLine.style.display = 'block';
+    } else {
+      previewLine.style.display = 'none';
     }
   });
 
   async function deploy() {
     const btn = document.getElementById('deploy-btn');
     const result = document.getElementById('result');
-    const html = document.getElementById('html').value.trim();
-    const slug = slugInput.value.trim();
-    const company = companyInput.value.trim();
+    const html = htmlInput.value.trim();
 
-    if (!html || !slug || !company) {
+    if (!html) {
       result.className = 'result error';
-      result.textContent = 'Fill in all three fields.';
+      result.textContent = 'Paste the HTML first.';
       return;
     }
 
@@ -206,16 +202,23 @@
       return;
     }
 
+    const parsed = extractFromHtml(html);
+    if (!parsed) {
+      result.className = 'result error';
+      result.textContent = 'Could not find the company name in the HTML. Expected a <title> like "Your Funding Options | Company Name | Risecap".';
+      return;
+    }
+
     btn.disabled = true;
     btn.textContent = 'Deploying...';
     result.className = 'result loading';
-    result.textContent = 'Pushing to GitHub Pages...';
+    result.textContent = 'Publishing ' + parsed.company + '...';
 
     try {
       const resp = await fetch('https://risecap.app.n8n.cloud/webhook/publish-options', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ html, slug, company })
+        body: JSON.stringify({ html, slug: parsed.slug, company: parsed.company })
       });
 
       const data = await resp.json();
