@@ -51,17 +51,20 @@
 
   body {
     font-family: 'Montserrat', -apple-system, sans-serif;
-    background: #F4F1F9;
+    background: var(--offwhite);
     color: var(--purple);
     min-height: 100vh;
     line-height: 1.6;
   }
 
   .page { max-width: 720px; margin: 0 auto; background: var(--offwhite); }
+  .header-wrap { background: var(--purple); }
+  .header-inner { max-width: 720px; margin: 0 auto; }
+  .intro-wrap { background: var(--surface); border-bottom: 1px solid var(--border); }
+  .intro-inner { max-width: 720px; margin: 0 auto; }
 
   /* -- HEADER -- */
   .header {
-    background: var(--purple);
     padding: 40px 48px 36px;
   }
   .brand {
@@ -112,8 +115,6 @@
   /* -- INTRO SECTION -- */
   .intro {
     padding: 32px 48px 24px;
-    border-bottom: 1px solid var(--border);
-    background: var(--surface);
   }
   .intro p {
     font-size: 14px;
@@ -205,14 +206,14 @@
 
   /* -- WHAT TO EXPECT -- */
   .expect-list { display: flex; flex-direction: column; gap: 0; border: 1px solid var(--border); border-radius: 12px; overflow: hidden; background: var(--surface); }
-  .expect-item {
+  .expect-step {
     display: flex;
     gap: 16px;
     padding: 18px 22px;
     border-bottom: 1px solid var(--border);
     align-items: flex-start;
   }
-  .expect-item:last-child { border-bottom: none; }
+  .expect-step:last-child { border-bottom: none; }
   .expect-num {
     width: 26px;
     height: 26px;
@@ -228,7 +229,7 @@
     margin-top: 1px;
   }
   .expect-title { font-size: 14px; font-weight: 500; color: var(--purple); margin-bottom: 4px; }
-  .expect-body { font-size: 13px; color: var(--text-muted); line-height: 1.55; }
+  .expect-desc { font-size: 13px; color: var(--text-muted); line-height: 1.55; }
 
   /* -- DOCS NEEDED -- */
   .docs-grid {
@@ -294,12 +295,16 @@
   /* -- FOOTER -- */
   .footer {
     background: var(--purple);
+    margin-top: 0;
+  }
+  .footer-inner {
+    max-width: 720px;
+    margin: 0 auto;
     padding: 20px 48px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 16px;
-    margin-top: 0;
   }
   .footer-brand {
     font-family: 'Feature Mono', 'IBM Plex Mono', monospace;
@@ -335,32 +340,39 @@
     .lc-body { grid-template-columns: 1fr 1fr; }
     .docs-grid { grid-template-columns: 1fr; }
     .contact { flex-direction: column; text-align: center; }
-    .footer { flex-direction: column; text-align: center; padding: 20px 24px; }
+    .footer-inner { flex-direction: column; text-align: center; padding: 20px 24px; }
     .footer-disclaimer { text-align: center; max-width: none; }
   }
 </style>
 </head>
 <body>
+<!-- HEADER (full-width) -->
+<div class="header-wrap">
+  <div class="header-inner">
+    <div class="header">
+      <div class="brand">Risecap - Your funding options</div>
+      <div class="header-intro">Prepared for Reciprocal Limited</div>
+      <div class="header-title">Here's what we've found for you.</div>
+      <div class="header-body">
+        We've assessed your situation and matched you to a shortlist of invoice finance providers who are genuinely well-suited to your business - <strong>an export ledger backed by Fortune 500 clients</strong> like Dell and Hitachi. That's a strong position to be in.
+      </div>
+      <div class="amount-pill">
+        £250,000 facility - Invoice Finance
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- INTRO (full-width) -->
+<div class="intro-wrap">
+  <div class="intro-inner">
+    <div class="intro">
+      <p>Invoice finance works by unlocking the cash tied up in your outstanding invoices - typically 80-90% of the invoice value upfront, with the remainder paid when your client settles. Given the payment terms on your new Fortune 500 contract, it's the most natural way to keep cash flowing as you deliver.</p><p>We've focused specifically on lenders who are comfortable with <strong>export receivables and enterprise clients</strong>. That narrows the pool but gives you a much stronger chance of a clean, fast offer from each lender we approach.</p>
+    </div>
+  </div>
+</div>
+
 <div class="page">
-
-  <!-- HEADER -->
-  <div class="header">
-    <div class="brand">Risecap - Your funding options</div>
-    <div class="header-intro">Prepared for Reciprocal Limited</div>
-    <div class="header-title">Here's what we've found for you.</div>
-    <div class="header-body">
-      We've assessed your situation and matched you to a shortlist of invoice finance providers who are genuinely well-suited to your business - <strong>an export ledger backed by Fortune 500 clients</strong> like Dell and Hitachi. That's a strong position to be in.
-    </div>
-    <div class="amount-pill">
-      £250,000 facility - Invoice Finance
-    </div>
-  </div>
-
-  <!-- INTRO -->
-  <div class="intro">
-    <p>Invoice finance works by unlocking the cash tied up in your outstanding invoices - typically 80-90% of the invoice value upfront, with the remainder paid when your client settles. Given the payment terms on your new Fortune 500 contract, it's the most natural way to keep cash flowing as you deliver.</p>
-    <p>We've focused specifically on lenders who are comfortable with <strong>export receivables and enterprise clients</strong>. That narrows the pool but gives you a much stronger chance of a clean, fast offer from each lender we approach.</p>
-  </div>
 
   <!-- MAIN -->
   <div class="main">
@@ -372,131 +384,7 @@
     </div>
 
     <div class="lenders">
-      
-      <!-- Accelerated Payments -->
-      <div class="lender-card">
-        <div class="lc-head">
-          <div>
-            <div class="lc-name">Accelerated Payments</div>
-            <div class="lc-type">Invoice finance - Whole-ledger or selective</div>
-          </div>
-          <div class="lc-badges">
-            <span class="badge badge-green">Export Y</span>
-            <span class="badge badge-purple">No PG required</span>
-          </div>
-        </div>
-        <div class="lc-body">
-          <div>
-            <div class="lc-stat-label">Indicative rate</div>
-            <div class="lc-stat-value">1.75-2.5%</div>
-            <div class="lc-stat-note">per annum</div>
-          </div>
-          <div>
-            <div class="lc-stat-label">Advance rate</div>
-            <div class="lc-stat-value">Up to 85%</div>
-            <div class="lc-stat-note">of invoice value</div>
-          </div>
-          <div>
-            <div class="lc-stat-label">Decision time</div>
-            <div class="lc-stat-value">24 hours</div>
-            <div class="lc-stat-note">from submission</div>
-          </div>
-        </div>
-        <div class="lc-pitch">Their underwriting centres on the quality of your debtors rather than your balance sheet - which works strongly in your favour with clients like Dell and Hitachi. No personal guarantee required, no long-term contract, and they explicitly support OECD export receivables.</div>
-      </div>
-
-      <!-- Aldermore -->
-      <div class="lender-card">
-        <div class="lc-head">
-          <div>
-            <div class="lc-name">Aldermore</div>
-            <div class="lc-type">Invoice finance - Factoring or confidential discounting</div>
-          </div>
-          <div class="lc-badges">
-            <span class="badge badge-green">GGS available</span>
-          </div>
-        </div>
-        <div class="lc-body">
-          <div>
-            <div class="lc-stat-label">Indicative rate</div>
-            <div class="lc-stat-value">6-9%</div>
-            <div class="lc-stat-note">per annum</div>
-          </div>
-          <div>
-            <div class="lc-stat-label">Advance rate</div>
-            <div class="lc-stat-value">Up to 90%</div>
-            <div class="lc-stat-note">of invoice value</div>
-          </div>
-          <div>
-            <div class="lc-stat-label">Backing</div>
-            <div class="lc-stat-value">Institutional</div>
-            <div class="lc-stat-note">Government Growth Scheme</div>
-          </div>
-        </div>
-        <div class="lc-pitch">A well-established invoice finance provider with institutional backing. The Government Growth Scheme may be available given your turnover level, which can improve the terms you receive. Clean credit profile and strong balance sheet work well here.</div>
-      </div>
-
-      <!-- MUSE Finance -->
-      <div class="lender-card">
-        <div class="lc-head">
-          <div>
-            <div class="lc-name">MUSE Finance</div>
-            <div class="lc-type">Invoice finance - AI-powered, bespoke underwriting</div>
-          </div>
-          <div class="lc-badges">
-            <span class="badge badge-amber">Quote on review</span>
-          </div>
-        </div>
-        <div class="lc-body">
-          <div>
-            <div class="lc-stat-label">Indicative rate</div>
-            <div class="lc-stat-value">Bespoke</div>
-            <div class="lc-stat-note">confirmed post-review</div>
-          </div>
-          <div>
-            <div class="lc-stat-label">Advance rate</div>
-            <div class="lc-stat-value">Up to 95%</div>
-            <div class="lc-stat-note">highest in market</div>
-          </div>
-          <div>
-            <div class="lc-stat-label">Cash timing</div>
-            <div class="lc-stat-value">24-72 hours</div>
-            <div class="lc-stat-note">from activation</div>
-          </div>
-        </div>
-        <div class="lc-pitch">MUSE offers the highest advance rate we have seen - up to 95% of invoice value. Their platform takes a bespoke approach to each client, which suits a business like yours with a more complex international ledger. Rate confirmed once they have reviewed your debtors book.</div>
-      </div>
-
-      <!-- Bibby Financial Services -->
-      <div class="lender-card">
-        <div class="lc-head">
-          <div>
-            <div class="lc-name">Bibby Financial Services</div>
-            <div class="lc-type">Invoice finance - Factoring</div>
-          </div>
-          <div class="lc-badges">
-            <span class="badge badge-purple">Established specialist</span>
-          </div>
-        </div>
-        <div class="lc-body">
-          <div>
-            <div class="lc-stat-label">Indicative rate</div>
-            <div class="lc-stat-value">Quote-based</div>
-            <div class="lc-stat-note">confirmed on review</div>
-          </div>
-          <div>
-            <div class="lc-stat-label">Advance rate</div>
-            <div class="lc-stat-value">Up to 90%</div>
-            <div class="lc-stat-note">of invoice value</div>
-          </div>
-          <div>
-            <div class="lc-stat-label">Market standing</div>
-            <div class="lc-stat-value">Top 3 UK</div>
-            <div class="lc-stat-note">independent IF provider</div>
-          </div>
-        </div>
-        <div class="lc-pitch">One of the UK's largest independent invoice finance providers with deep B2B experience. A personal guarantee from directors and a debenture over business assets will typically be required, but the scale of their operation means strong terms are achievable for a business of your profile.</div>
-      </div>
+      <div class="lender-card"><div class="lc-head"><div><div class="lc-name">Accelerated Payments</div><div class="lc-type">Invoice finance - Whole-ledger or selective</div></div><div class="lc-badges"><span class="badge badge-green">Export Y</span><span class="badge badge-purple">No PG required</span></div></div><div class="lc-body"><div><div class="lc-stat-label">Indicative rate</div><div class="lc-stat-value">1.75-2.5%</div><div class="lc-stat-note">per annum</div></div><div><div class="lc-stat-label">Advance rate</div><div class="lc-stat-value">Up to 85%</div><div class="lc-stat-note">of invoice value</div></div><div><div class="lc-stat-label">Decision time</div><div class="lc-stat-value">24 hours</div><div class="lc-stat-note">from submission</div></div></div><div class="lc-pitch">Their underwriting centres on the quality of your debtors rather than your balance sheet - which works strongly in your favour with clients like Dell and Hitachi. No personal guarantee required, no long-term contract, and they explicitly support OECD export receivables.</div></div><div class="lender-card"><div class="lc-head"><div><div class="lc-name">Aldermore</div><div class="lc-type">Invoice finance - Factoring or confidential discounting</div></div><div class="lc-badges"><span class="badge badge-green">GGS available</span><span class="badge badge-purple">Bank-backed</span></div></div><div class="lc-body"><div><div class="lc-stat-label">Indicative rate</div><div class="lc-stat-value">1.5-2.5%</div><div class="lc-stat-note">over base</div></div><div><div class="lc-stat-label">Advance rate</div><div class="lc-stat-value">Up to 90%</div><div class="lc-stat-note">of invoice value</div></div><div><div class="lc-stat-label">Facility range</div><div class="lc-stat-value">£50k-£25M</div><div class="lc-stat-note">turnover dependent</div></div></div><div class="lc-pitch">A bank-backed lender with dedicated invoice finance underwriting. They offer both factoring and confidential discounting, so you can choose whether your clients know about the facility. GGS-accredited, which can reduce your costs if eligible.</div></div><div class="lender-card"><div class="lc-head"><div><div class="lc-name">MUSE Finance</div><div class="lc-type">Invoice finance - Selective</div></div><div class="lc-badges"><span class="badge badge-green">No minimum contract</span><span class="badge badge-purple">Selective available</span></div></div><div class="lc-body"><div><div class="lc-stat-label">Indicative rate</div><div class="lc-stat-value">2-3%</div><div class="lc-stat-note">per invoice</div></div><div><div class="lc-stat-label">Advance rate</div><div class="lc-stat-value">Up to 80%</div><div class="lc-stat-note">of invoice value</div></div><div><div class="lc-stat-label">Decision time</div><div class="lc-stat-value">48 hours</div><div class="lc-stat-note">from submission</div></div></div><div class="lc-pitch">Selective invoice finance means you choose which invoices to fund - useful if you only need to accelerate the larger Fortune 500 invoices rather than your whole ledger. No long-term contract, so you can use it as and when you need it.</div></div><div class="lender-card"><div class="lc-head"><div><div class="lc-name">Bibby Financial Services</div><div class="lc-type">Invoice finance - Factoring with bad debt protection</div></div><div class="lc-badges"><span class="badge badge-green">Bad debt protection</span><span class="badge badge-purple">Export specialist</span></div></div><div class="lc-body"><div><div class="lc-stat-label">Indicative rate</div><div class="lc-stat-value">1.5-2.75%</div><div class="lc-stat-note">over base</div></div><div><div class="lc-stat-label">Advance rate</div><div class="lc-stat-value">Up to 85%</div><div class="lc-stat-note">of invoice value</div></div><div><div class="lc-stat-label">Facility range</div><div class="lc-stat-value">£25k-£15M</div><div class="lc-stat-note">turnover dependent</div></div></div><div class="lc-pitch">Strong track record with export businesses. Their bad debt protection option means if a client doesn't pay, you're covered - particularly relevant when invoicing overseas. They have a dedicated international trade team who understand cross-border receivables.</div></div>
     </div>
 
     <!-- WHAT TO EXPECT -->
@@ -506,28 +394,7 @@
     </div>
 
     <div class="expect-list">
-      
-      <div class="expect-item">
-        <div class="expect-num">1</div>
-        <div>
-          <div class="expect-title">You give us the go-ahead</div>
-          <div class="expect-body">Once you are happy with the shortlist, we submit to all four lenders at the same time. We write the submissions, manage the conversations, and keep you updated throughout - you will not need to deal with any of them directly unless you want to.</div>
-        </div>
-      </div>
-      <div class="expect-item">
-        <div class="expect-num">2</div>
-        <div>
-          <div class="expect-title">Initial feedback within 24-48 hours</div>
-          <div class="expect-body">Most invoice finance lenders move quickly once they have reviewed the debtors book. You can expect indicative terms from most of the shortlist within two working days. Accelerated Payments can often respond the same day.</div>
-        </div>
-      </div>
-      <div class="expect-item">
-        <div class="expect-num">3</div>
-        <div>
-          <div class="expect-title">We compare everything for you</div>
-          <div class="expect-body">We will put all the offers side by side - advance rate, discount rate, service fee, and total annual cost - in plain English. No small print surprises. You choose what works best for the business and we take it to drawdown.</div>
-        </div>
-      </div>
+      <div class="expect-step"><div class="expect-num">1</div><div><div class="expect-title">We submit your application</div><div class="expect-desc">Each lender above receives a tailored submission highlighting the strengths of your business.</div></div></div><div class="expect-step"><div class="expect-num">2</div><div><div class="expect-title">Initial feedback within 24-48 hours</div><div class="expect-desc">Invoice finance lenders typically respond quickly. We chase and keep you updated throughout.</div></div></div><div class="expect-step"><div class="expect-num">3</div><div><div class="expect-title">We present your offers clearly</div><div class="expect-desc">Every offer is laid out side-by-side so you can compare rates, advance rates, and terms easily.</div></div></div><div class="expect-step"><div class="expect-num">4</div><div><div class="expect-title">You choose what works best</div><div class="expect-desc">No pressure, no hard sell. Pick the option that fits your business and we handle the rest.</div></div></div><div class="expect-step"><div class="expect-num">5</div><div><div class="expect-title">Onboarding and completion</div><div class="expect-desc">We manage the paperwork and onboarding process through to drawdown. Typically 1-2 weeks from acceptance.</div></div></div>
     </div>
 
     <!-- DOCS -->
@@ -537,43 +404,40 @@
     </div>
 
     <div class="docs-grid">
-      
-      <div class="doc-item"><div class="doc-dot"></div>Latest filed accounts</div>
-      <div class="doc-item"><div class="doc-dot"></div>6 months bank statements</div>
-      <div class="doc-item"><div class="doc-dot"></div>Aged debtors ledger</div>
-      <div class="doc-item"><div class="doc-dot"></div>Sample invoice with sign-off documentation</div>
-      <div class="doc-item"><div class="doc-dot"></div>Management accounts (if available)</div>
-      <div class="doc-item"><div class="doc-dot"></div>Fortune 500 contract summary (redacted fine)</div>
+      <div class="doc-item"><div class="doc-dot"></div>Latest filed accounts</div><div class="doc-item"><div class="doc-dot"></div>6 months bank statements</div><div class="doc-item"><div class="doc-dot"></div>Aged debtors ledger</div><div class="doc-item"><div class="doc-dot"></div>Sample invoice with sign-off documentation</div><div class="doc-item"><div class="doc-dot"></div>Management accounts (if available)</div><div class="doc-item"><div class="doc-dot"></div>Fortune 500 contract summary (redacted fine)</div>
     </div>
 
     <!-- WHY RISECAP -->
     <div class="why-box">
       <div class="why-title">Why we've approached this the way we have</div>
-      <div class="why-body">Most invoice finance lenders work with UK-only ledgers. Because you export to India and Dubai alongside the UK, we've been selective - only approaching lenders who explicitly support OECD export receivables. That means a smaller shortlist, but <strong>a much higher chance of a real offer from each one</strong>. We'd rather send you four strong options than ten long shots.</div>
+      <div class="why-body">We work with over 200 lenders so you're not limited to one bank's answer. Every option is presented clearly so you can compare and decide. There's no cost to you - we're paid by the lender on completion.</div>
     </div>
 
     <!-- CONTACT -->
     <div class="contact">
       <div>
-        <div class="contact-name">Mikey</div>
+        <div class="contact-name">Michael Joyce</div>
         <div class="contact-role">Funding Consultant - Risecap</div>
         <div class="contact-detail">
           Any questions at all, just reply to this email or give me a call.<br>
           We'll present all offers clearly so you can compare and decide.
         </div>
       </div>
-      <div class="contact-avatar">MR</div>
+      <div class="contact-avatar">MJ</div>
     </div>
 
   </div>
 
-  <!-- FOOTER -->
-  <div class="footer">
-    <span class="footer-brand">Risecap - Funding partners</span>
-    <span class="footer-disclaimer">Indicative only. All rates subject to lender review and individual credit assessment. This is not financial advice.</span>
   </div>
-  <div class="generated-date">Prepared 19 June 2026</div>
 
+<!-- FOOTER (full-width) -->
+<div class="footer">
+  <div class="footer-inner">
+    <span class="footer-brand">Risecap - Funding partners</span>
+    <span class="footer-disclaimer">Indicative only. All rates subject to lender review and credit assessment.</span>
+  </div>
 </div>
+<div class="generated-date">Prepared 19 June 2026</div>
+
 </body>
 </html>
