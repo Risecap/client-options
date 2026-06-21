@@ -1,25 +1,10 @@
-<!--
-  Risecap Client Options Template
-  Placeholders (wrapped in double curly braces when used in the markup below):
-    COMPANY_NAME         - client company name (title + header)
-    HEADER_BODY          - intro paragraph in the purple header
-    GGS_NOTE             - optional one-liner re GGS / grant context (omit when empty)
-    AMOUNT_PILL          - funding amount badge content
-    LENDER_CARDS         - primary shortlist lender cards
-    BACKUP_LENDER_CARDS  - secondary "also exploring" lender cards
-    EXPECT_STEPS         - numbered next-steps items
-    DOC_ITEMS            - document checklist grid items
-    WHY_BODY             - "why we approached it this way" copy
-    CONSULTANT_NAME      - consultant full name
-    CONSULTANT_INITIALS  - consultant initials for avatar
-    GENERATED_DATE       - date string for footer
--->
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow">
+<meta name="deal-id" content="1555">
 <title>Your Funding Options | Totally Rewards Limited | Risecap</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
@@ -76,8 +61,6 @@
   .page { max-width: 720px; margin: 0 auto; background: var(--offwhite); }
   .header-wrap { background: var(--purple); }
   .header-inner { max-width: 720px; margin: 0 auto; }
-  .ggs-note { color: rgba(255,252,248,0.8); font-weight: 500; }
-
   /* -- HEADER -- */
   .header {
     padding: 40px 48px 36px;
@@ -127,7 +110,6 @@
     margin-top: 20px;
   }
 
-
   /* -- MAIN -- */
   .main { padding: 36px 48px 48px; }
 
@@ -152,15 +134,6 @@
 
   /* -- LENDER CARDS -- */
   .lenders { display: flex; flex-direction: column; gap: 14px; margin-bottom: 8px; }
-
-  .backup-label {
-    font-family: 'Feature Mono', monospace;
-    font-size: 10px;
-    color: var(--text-dim);
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    margin: 28px 0 14px;
-  }
 
   .lender-card {
     background: var(--surface);
@@ -193,7 +166,6 @@
   }
   .badge-green { background: var(--green-bg); color: var(--green); }
   .badge-purple { background: #EEEDFE; color: #4338CA; }
-  /* badge-amber is used for GGS, revenue-based, and "also exploring" labels */
   .badge-amber { background: var(--amber-bg); color: var(--amber); }
 
   .lc-body { padding: 16px 24px 20px; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
@@ -366,11 +338,10 @@
       <div class="header-intro">Prepared for Totally Rewards Limited</div>
       <div class="header-title">Here's what we've found for you.</div>
       <div class="header-body">
-        We have reviewed your business and approached a range of lenders on your behalf. Your management accounts to March 2026 show <strong>over &#163;1 million in turnover and a profitable EBITDA</strong> - that is the story we are leading with. We are approaching lenders across term loan and revenue-based routes, and have requested Growth Guarantee Scheme terms where eligible.
-        <span class="ggs-note">Growth Guarantee Scheme terms requested from eligible lenders on this list.</span>
+        We've reviewed your funding position and put together a focused shortlist of lenders suited to where Totally is right now. <strong>Six options across three funding structures</strong> - revolving credit, revenue-based, and a government-backed term loan. We're moving forward with all of them on your behalf.
       </div>
       <div class="amount-pill">
-        &#163;250,000 - Working capital and growth
+        £100,000 - Working capital and growth
       </div>
     </div>
   </div>
@@ -389,290 +360,192 @@
 
     <div class="lenders">
       
-      <div class="lender-card">
-        <div class="lc-head">
-          <div>
-            <div class="lc-name">Funding Circle</div>
-            <div class="lc-type">Unsecured Term Loan</div>
-          </div>
-          <div class="lc-badges">
-            <span class="badge badge-green">Main</span>
-            <span class="badge badge-purple">Term Loan</span>
-            <span class="badge badge-amber">GGS</span>
-          </div>
-        </div>
-        <div class="lc-body">
-          <div>
-            <div class="lc-stat-label">Indicative rate</div>
-            <div class="lc-stat-value">6.9% - 24.6%</div>
-            <div class="lc-stat-note">per annum</div>
-          </div>
-          <div>
-            <div class="lc-stat-label">Facility size</div>
-            <div class="lc-stat-value">Up to &#163;750k</div>
-            <div class="lc-stat-note">unsecured</div>
-          </div>
-          <div>
-            <div class="lc-stat-label">Decision speed</div>
-            <div class="lc-stat-value">2 - 5 days</div>
-            <div class="lc-stat-note">typical</div>
-          </div>
-        </div>
-        <div class="lc-pitch">One of the UK's leading business lenders. We are requesting Growth Guarantee Scheme terms as part of this submission, which can improve both the rate and the likelihood of a positive decision. They will assess your current trading performance - that is where your case is strongest.</div>
+  <div class="lender-card">
+    <div class="lc-head">
+      <div>
+        <div class="lc-name">Funding Circle</div>
+        <div class="lc-type">Government-backed term loan - Growth Guarantee Scheme</div>
       </div>
-
-      <div class="lender-card">
-        <div class="lc-head">
-          <div>
-            <div class="lc-name">Shawbrook Bank</div>
-            <div class="lc-type">Unsecured Term Loan</div>
-          </div>
-          <div class="lc-badges">
-            <span class="badge badge-green">Main</span>
-            <span class="badge badge-purple">Term Loan</span>
-            <span class="badge badge-amber">GGS</span>
-          </div>
-        </div>
-        <div class="lc-body">
-          <div>
-            <div class="lc-stat-label">Indicative rate</div>
-            <div class="lc-stat-value">10.0% - 15.0%</div>
-            <div class="lc-stat-note">per annum</div>
-          </div>
-          <div>
-            <div class="lc-stat-label">Facility size</div>
-            <div class="lc-stat-value">Up to &#163;150k</div>
-            <div class="lc-stat-note">unsecured</div>
-          </div>
-          <div>
-            <div class="lc-stat-label">Decision speed</div>
-            <div class="lc-stat-value">3 - 7 days</div>
-            <div class="lc-stat-note">typical</div>
-          </div>
-        </div>
-        <div class="lc-pitch">A specialist bank with a focused unsecured product for established businesses. We are requesting Growth Guarantee Scheme terms here too. Strong fit for B2B technology companies with a clear revenue trajectory.</div>
-      </div>
-
-      <div class="lender-card">
-        <div class="lc-head">
-          <div>
-            <div class="lc-name">BCRS Business Loans</div>
-            <div class="lc-type">Unsecured Term Loan - Community Lender</div>
-          </div>
-          <div class="lc-badges">
-            <span class="badge badge-green">Main</span>
-            <span class="badge badge-purple">Term Loan</span>
-          </div>
-        </div>
-        <div class="lc-body">
-          <div>
-            <div class="lc-stat-label">Indicative rate</div>
-            <div class="lc-stat-value">12.0% - 16.0%</div>
-            <div class="lc-stat-note">per annum</div>
-          </div>
-          <div>
-            <div class="lc-stat-label">Facility size</div>
-            <div class="lc-stat-value">Up to &#163;250k</div>
-            <div class="lc-stat-note">unsecured</div>
-          </div>
-          <div>
-            <div class="lc-stat-label">Decision speed</div>
-            <div class="lc-stat-value">5 - 10 days</div>
-            <div class="lc-stat-note">typical</div>
-          </div>
-        </div>
-        <div class="lc-pitch">A community development lender with a different approach to underwriting. They look at growth trajectory and business purpose, not just historic financials. Your journey from &#163;244k to &#163;1m+ turnover is exactly the kind of story they lend into.</div>
-      </div>
-
-      <div class="lender-card">
-        <div class="lc-head">
-          <div>
-            <div class="lc-name">Outfund</div>
-            <div class="lc-type">Revenue-Based Loan</div>
-          </div>
-          <div class="lc-badges">
-            <span class="badge badge-green">Main</span>
-            <span class="badge badge-amber">Revenue-Based</span>
-          </div>
-        </div>
-        <div class="lc-body">
-          <div>
-            <div class="lc-stat-label">Indicative rate</div>
-            <div class="lc-stat-value">9.6% - 18.0%</div>
-            <div class="lc-stat-note">per annum equiv.</div>
-          </div>
-          <div>
-            <div class="lc-stat-label">Facility size</div>
-            <div class="lc-stat-value">Up to &#163;500k</div>
-            <div class="lc-stat-note">revenue-based</div>
-          </div>
-          <div>
-            <div class="lc-stat-label">Decision speed</div>
-            <div class="lc-stat-value">2 - 5 days</div>
-            <div class="lc-stat-note">bank-statement led</div>
-          </div>
-        </div>
-        <div class="lc-pitch">Outfund underwrites on current revenue and bank performance rather than filed accounts - which plays directly to your strengths. Your recurring B2B invoice model and international client base are a natural fit for their product.</div>
+      <div class="lc-badges">
+        <span class="badge badge-purple">GGS</span>
+        <span class="badge badge-green">Submitting</span>
       </div>
     </div>
-
-    <div class="backup-label">Also exploring</div>
-    <div class="lenders">
-      
-      <div class="lender-card">
-        <div class="lc-head">
-          <div>
-            <div class="lc-name">Iwoca</div>
-            <div class="lc-type">Existing facility - top-up or restructure</div>
-          </div>
-          <div class="lc-badges">
-            <span class="badge badge-amber">Existing lender</span>
-            <span class="badge badge-purple">Term Loan</span>
-          </div>
-        </div>
-        <div class="lc-body">
-          <div>
-            <div class="lc-stat-label">Current balance</div>
-            <div class="lc-stat-value">&#163;334k</div>
-            <div class="lc-stat-note">outstanding</div>
-          </div>
-          <div>
-            <div class="lc-stat-label">Indicative rate</div>
-            <div class="lc-stat-value">12.0% - 61.8%</div>
-            <div class="lc-stat-note">per annum</div>
-          </div>
-          <div>
-            <div class="lc-stat-label">Decision speed</div>
-            <div class="lc-stat-value">1 - 3 days</div>
-            <div class="lc-stat-note">existing relationship</div>
-          </div>
-        </div>
-        <div class="lc-pitch">Iwoca already know your business. We are exploring whether a top-up or restructure of your existing facility is possible - this could simplify your repayment position and may be the quickest route to the capital you need.</div>
+    <div class="lc-body">
+      <div>
+        <div class="lc-stat-label">Rate</div>
+        <div class="lc-stat-value">From 6.9% pa</div>
+        <div class="lc-stat-note">Subject to credit assessment</div>
       </div>
-
-      <div class="lender-card">
-        <div class="lc-head">
-          <div>
-            <div class="lc-name">Wayflyer</div>
-            <div class="lc-type">Revenue-Based Loan</div>
-          </div>
-          <div class="lc-badges">
-            <span class="badge badge-amber">Also exploring</span>
-            <span class="badge badge-amber">Revenue-Based</span>
-          </div>
-        </div>
-        <div class="lc-body">
-          <div>
-            <div class="lc-stat-label">Indicative rate</div>
-            <div class="lc-stat-value">8.0% - 20.0%</div>
-            <div class="lc-stat-note">per annum equiv.</div>
-          </div>
-          <div>
-            <div class="lc-stat-label">Facility size</div>
-            <div class="lc-stat-value">Up to &#163;500k</div>
-            <div class="lc-stat-note">revenue-based</div>
-          </div>
-          <div>
-            <div class="lc-stat-label">Decision speed</div>
-            <div class="lc-stat-value">2 - 5 days</div>
-            <div class="lc-stat-note">typical</div>
-          </div>
-        </div>
-        <div class="lc-pitch">Strong performer for B2B businesses with recurring digital revenue and international reach. Wayflyer look at your bank inflows and trading patterns - exactly the picture we would want to present for Totally.</div>
+      <div>
+        <div class="lc-stat-label">Term</div>
+        <div class="lc-stat-value">6 - 72 months</div>
+        <div class="lc-stat-note">Fixed monthly repayment</div>
       </div>
-
-      <div class="lender-card">
-        <div class="lc-head">
-          <div>
-            <div class="lc-name">Uncapped</div>
-            <div class="lc-type">Revenue-Based Loan</div>
-          </div>
-          <div class="lc-badges">
-            <span class="badge badge-amber">Also exploring</span>
-            <span class="badge badge-amber">Revenue-Based</span>
-          </div>
-        </div>
-        <div class="lc-body">
-          <div>
-            <div class="lc-stat-label">Indicative rate</div>
-            <div class="lc-stat-value">8.4% - 15.6%</div>
-            <div class="lc-stat-note">per annum equiv.</div>
-          </div>
-          <div>
-            <div class="lc-stat-label">Facility size</div>
-            <div class="lc-stat-value">Up to &#163;5m</div>
-            <div class="lc-stat-note">revenue-based</div>
-          </div>
-          <div>
-            <div class="lc-stat-label">Decision speed</div>
-            <div class="lc-stat-value">3 - 7 days</div>
-            <div class="lc-stat-note">typical</div>
-          </div>
-        </div>
-        <div class="lc-pitch">Specialist in recurring-revenue businesses. Competitive rate band and a fast process. We are including them to ensure you have the broadest picture of what is available.</div>
+      <div>
+        <div class="lc-stat-label">Security</div>
+        <div class="lc-stat-value">Personal guarantee</div>
+        <div class="lc-stat-note">No property charge</div>
       </div>
+    </div>
+    <div class="lc-pitch">One of the UK's leading small business lenders, backed by the government's Growth Guarantee Scheme. The GGS provides a partial government guarantee behind the loan, which gives lenders more confidence to support growing businesses at Totally's stage. Personal guarantee required - no charge on property.</div>
+  </div>
 
-      <div class="lender-card">
-        <div class="lc-head">
-          <div>
-            <div class="lc-name">Lending Crowd</div>
-            <div class="lc-type">Unsecured Term Loan</div>
-          </div>
-          <div class="lc-badges">
-            <span class="badge badge-amber">Also exploring</span>
-            <span class="badge badge-purple">Term Loan</span>
-          </div>
-        </div>
-        <div class="lc-body">
-          <div>
-            <div class="lc-stat-label">Indicative rate</div>
-            <div class="lc-stat-value">5.2% - 20.0%</div>
-            <div class="lc-stat-note">per annum</div>
-          </div>
-          <div>
-            <div class="lc-stat-label">Facility size</div>
-            <div class="lc-stat-value">&#163;75k - &#163;500k</div>
-            <div class="lc-stat-note">unsecured</div>
-          </div>
-          <div>
-            <div class="lc-stat-label">Decision speed</div>
-            <div class="lc-stat-value">5 - 10 days</div>
-            <div class="lc-stat-note">typical</div>
-          </div>
-        </div>
-        <div class="lc-pitch">Peer-to-peer lender with one of the most competitive rate bands on the market. We are soft-testing appetite with them given your current trading profile. If they are comfortable with the management accounts picture, the rate could be very attractive.</div>
+  <div class="lender-card">
+    <div class="lc-head">
+      <div>
+        <div class="lc-name">Wayflyer</div>
+        <div class="lc-type">Revolving credit facility</div>
       </div>
+      <div class="lc-badges">
+        <span class="badge badge-green">No security required</span>
+        <span class="badge badge-green">Submitting</span>
+      </div>
+    </div>
+    <div class="lc-body">
+      <div>
+        <div class="lc-stat-label">Rate</div>
+        <div class="lc-stat-value">8% - 24% pa</div>
+        <div class="lc-stat-note">Subject to credit assessment</div>
+      </div>
+      <div>
+        <div class="lc-stat-label">Term</div>
+        <div class="lc-stat-value">Flexible</div>
+        <div class="lc-stat-note">Draw down and repay as needed</div>
+      </div>
+      <div>
+        <div class="lc-stat-label">Security</div>
+        <div class="lc-stat-value">None required</div>
+        <div class="lc-stat-note">No PG, no property charge</div>
+      </div>
+    </div>
+    <div class="lc-pitch">A revolving credit facility - draw what you need, when you need it, and repay as client payments come in. Wayflyer specialises in fast-growing businesses and underwrites on revenue trajectory rather than historical accounts. No personal guarantee and no security of any kind required.</div>
+  </div>
 
-      <div class="lender-card">
-        <div class="lc-head">
-          <div>
-            <div class="lc-name">Outfund B2B</div>
-            <div class="lc-type">Revenue-Based SaaS Facility</div>
-          </div>
-          <div class="lc-badges">
-            <span class="badge badge-amber">Also exploring</span>
-            <span class="badge badge-amber">Revenue-Based</span>
-          </div>
-        </div>
-        <div class="lc-body">
-          <div>
-            <div class="lc-stat-label">Indicative rate</div>
-            <div class="lc-stat-value">2.0% - 10.0%</div>
-            <div class="lc-stat-note">per annum equiv.</div>
-          </div>
-          <div>
-            <div class="lc-stat-label">Facility size</div>
-            <div class="lc-stat-value">Up to &#163;10m</div>
-            <div class="lc-stat-note">SaaS / recurring revenue</div>
-          </div>
-          <div>
-            <div class="lc-stat-label">Decision speed</div>
-            <div class="lc-stat-value">3 - 7 days</div>
-            <div class="lc-stat-note">typical</div>
-          </div>
-        </div>
-        <div class="lc-pitch">Outfund's B2B product is built for businesses with recurring corporate invoice revenue. This carries the most competitive rate on this list. We are exploring it alongside the standard Outfund product to find the best fit.</div>
+  <div class="lender-card">
+    <div class="lc-head">
+      <div>
+        <div class="lc-name">Multipli</div>
+        <div class="lc-type">Revenue-based loan</div>
       </div>
+      <div class="lc-badges">
+        <span class="badge badge-green">Flexible repayments</span>
+        <span class="badge badge-green">Submitting</span>
+      </div>
+    </div>
+    <div class="lc-body">
+      <div>
+        <div class="lc-stat-label">Rate</div>
+        <div class="lc-stat-value">10.8% - 15.5% pa</div>
+        <div class="lc-stat-note">Subject to credit assessment</div>
+      </div>
+      <div>
+        <div class="lc-stat-label">Term</div>
+        <div class="lc-stat-value">12 - 24 months</div>
+        <div class="lc-stat-note">Repayments flex with revenue</div>
+      </div>
+      <div>
+        <div class="lc-stat-label">Security</div>
+        <div class="lc-stat-value">Personal guarantee</div>
+        <div class="lc-stat-note">No property charge</div>
+      </div>
+    </div>
+    <div class="lc-pitch">A revenue-based loan where repayments move with your income - higher in strong months, lower in quieter ones. Multipli lends against your revenue trajectory rather than historical profit, which suits a business at Totally's stage of growth. Personal guarantee required, no charge on property.</div>
+  </div>
+
+  <div class="lender-card">
+    <div class="lc-head">
+      <div>
+        <div class="lc-name">Multifi</div>
+        <div class="lc-type">Revolving credit facility</div>
+      </div>
+      <div class="lc-badges">
+        <span class="badge badge-green">Submitting</span>
+      </div>
+    </div>
+    <div class="lc-body">
+      <div>
+        <div class="lc-stat-label">Rate</div>
+        <div class="lc-stat-value">23.88% - 29.88% pa</div>
+        <div class="lc-stat-note">Subject to credit assessment</div>
+      </div>
+      <div>
+        <div class="lc-stat-label">Term</div>
+        <div class="lc-stat-value">Up to 60 months</div>
+        <div class="lc-stat-note">Draw down and repay as needed</div>
+      </div>
+      <div>
+        <div class="lc-stat-label">Security</div>
+        <div class="lc-stat-value">Personal guarantee</div>
+        <div class="lc-stat-note">No property charge</div>
+      </div>
+    </div>
+    <div class="lc-pitch">A revolving credit line sized against your last 12 months of revenue. Draw what you need and repay as cashflow allows. Multifi underwrites on live revenue data and is well suited to businesses growing faster than their filed accounts reflect. Personal guarantee required, no property charge.</div>
+  </div>
+
+  <div class="lender-card">
+    <div class="lc-head">
+      <div>
+        <div class="lc-name">BCRS Business Loans</div>
+        <div class="lc-type">Unsecured term loan - Community development lender</div>
+      </div>
+      <div class="lc-badges">
+        <span class="badge badge-amber">Exploratory</span>
+        <span class="badge badge-green">Submitting</span>
+      </div>
+    </div>
+    <div class="lc-body">
+      <div>
+        <div class="lc-stat-label">Rate</div>
+        <div class="lc-stat-value">12% - 16% pa</div>
+        <div class="lc-stat-note">Subject to credit assessment</div>
+      </div>
+      <div>
+        <div class="lc-stat-label">Term</div>
+        <div class="lc-stat-value">24 - 72 months</div>
+        <div class="lc-stat-note">Fixed monthly repayment</div>
+      </div>
+      <div>
+        <div class="lc-stat-label">Security</div>
+        <div class="lc-stat-value">Personal guarantee</div>
+        <div class="lc-stat-note">No property charge</div>
+      </div>
+    </div>
+    <div class="lc-pitch">BCRS is a government-backed community development lender that takes a broader view of a business's story - growth plans, purpose, and management track record carry real weight alongside the numbers. Longer terms available than most commercial lenders, and a competitive rate band. We're exploring this route given Totally's growth trajectory and export profile.</div>
+  </div>
+
+  <div class="lender-card">
+    <div class="lc-head">
+      <div>
+        <div class="lc-name">Bloom</div>
+        <div class="lc-type">Revenue-based loan</div>
+      </div>
+      <div class="lc-badges">
+        <span class="badge badge-green">No security required</span>
+        <span class="badge badge-amber">Exploratory</span>
+        <span class="badge badge-green">Submitting</span>
+      </div>
+    </div>
+    <div class="lc-body">
+      <div>
+        <div class="lc-stat-label">Rate</div>
+        <div class="lc-stat-value">Up to 24% pa</div>
+        <div class="lc-stat-note">Subject to credit assessment</div>
+      </div>
+      <div>
+        <div class="lc-stat-label">Term</div>
+        <div class="lc-stat-value">12 - 24 months</div>
+        <div class="lc-stat-note">Repayments flex with revenue</div>
+      </div>
+      <div>
+        <div class="lc-stat-label">Security</div>
+        <div class="lc-stat-value">None required</div>
+        <div class="lc-stat-note">No PG, no property charge</div>
+      </div>
+    </div>
+    <div class="lc-pitch">A revenue-based lender with no personal guarantee and no security required. Repayments are structured as a percentage of monthly income, adjusting automatically as your revenue grows. We're exploring Bloom as an additional no-security route alongside Wayflyer.</div>
+  </div>
+
     </div>
 
     <!-- WHAT TO EXPECT -->
@@ -683,34 +556,35 @@
 
     <div class="expect-list">
       
-      <div class="expect-step">
-        <div class="expect-num">1</div>
-        <div>
-          <div class="expect-title">We submit on your behalf</div>
-          <div class="expect-desc">We package your documents and submit to the lenders above simultaneously. You do not need to contact any of them directly.</div>
-        </div>
-      </div>
-      <div class="expect-step">
-        <div class="expect-num">2</div>
-        <div>
-          <div class="expect-title">Lenders come back with offers</div>
-          <div class="expect-desc">Most decisions arrive within 2 to 7 working days. We will share each offer as it lands with a plain-English summary so you can compare properly.</div>
-        </div>
-      </div>
-      <div class="expect-step">
-        <div class="expect-num">3</div>
-        <div>
-          <div class="expect-title">You choose, we support</div>
-          <div class="expect-desc">No pressure to accept anything. Once you have decided, we guide you through the final steps. Funds typically land within 24 to 72 hours of accepting an offer.</div>
-        </div>
-      </div>
-      <div class="expect-step">
-        <div class="expect-num">4</div>
-        <div>
-          <div class="expect-title">We stay in touch</div>
-          <div class="expect-desc">If lenders come back with questions we handle it. You should not need to do anything other than make the final decision.</div>
-        </div>
-      </div>
+  <div class="expect-step">
+    <div class="expect-num">1</div>
+    <div>
+      <div class="expect-title">We submit to all six lenders</div>
+      <div class="expect-desc">We send your proposal with supporting documents to each lender. Every submission is tailored - we lead with your revenue growth story.</div>
+    </div>
+  </div>
+  <div class="expect-step">
+    <div class="expect-num">2</div>
+    <div>
+      <div class="expect-title">Lenders come back with terms</div>
+      <div class="expect-desc">Most lenders return initial indications within 2-5 working days. Any follow-up questions from lenders are handled by us.</div>
+    </div>
+  </div>
+  <div class="expect-step">
+    <div class="expect-num">3</div>
+    <div>
+      <div class="expect-title">We present all offers side by side</div>
+      <div class="expect-desc">Once offers are in we'll walk you through each one - rate, term, total cost, and any conditions - so you can compare clearly and decide.</div>
+    </div>
+  </div>
+  <div class="expect-step">
+    <div class="expect-num">4</div>
+    <div>
+      <div class="expect-title">You choose, we complete</div>
+      <div class="expect-desc">Once you've selected your preferred offer we handle the completion process and keep you updated through to drawdown.</div>
+    </div>
+  </div>
+
     </div>
 
     <!-- DOCS -->
@@ -721,25 +595,21 @@
 
     <div class="docs-grid">
       
-      <div class="doc-item"><div class="doc-dot"></div>Management accounts (to March 2026)</div>
-      <div class="doc-item"><div class="doc-dot"></div>Filed accounts (most recent)</div>
-      <div class="doc-item"><div class="doc-dot"></div>6 months bank statements</div>
-      <div class="doc-item"><div class="doc-dot"></div>Director ID and proof of address</div>
-      <div class="doc-item"><div class="doc-dot"></div>Credit report (numeric score)</div>
-      <div class="doc-item"><div class="doc-dot"></div>VAT registration confirmation</div>
+  <div class="doc-item"><div class="doc-dot"></div>VAT returns (last 4 quarters)</div>
+
     </div>
 
     <!-- WHY RISECAP -->
     <div class="why-box">
       <div class="why-title">Why we've approached this the way we have</div>
-      <div class="why-body">Your filed accounts show a period of investment and growth - and on paper they look loss-making. But your management accounts to March 2026 tell a very different story: <strong>over &#163;1 million in turnover and a profitable EBITDA</strong>. That is a 327% increase in revenue in under two years.<br><br>We have focused on lenders who look primarily at current trading rather than historic filed accounts, and on those with a more holistic approach to underwriting. The revenue-based options are particularly well suited to Totally - <strong>recurring B2B invoice revenue, international clients, and strong monthly inflows</strong> are exactly the profile those lenders are built for. We expect the most competitive offers to come from that route.</div>
+      <div class="why-body">The existing facility means we've focused on lenders experienced in supporting businesses that already carry some debt - and specifically on structures where repayments work with your cashflow rather than against it. <strong>Revolving credit and revenue-based products</strong> give you flexibility as Totally continues to scale. The Growth Guarantee Scheme submission widens lender appetite through a government-backed route. We've been straightforward with every lender about where the business is today and where it's going - that transparency gets better outcomes.</div>
     </div>
 
     <!-- CONTACT -->
     <div class="contact">
       <div>
         <div class="contact-name">Tony Jaiyeola</div>
-        <div class="contact-role">Funding Consultant - Risecap</div>
+        <div class="contact-role">Managing Director - Risecap</div>
         <div class="contact-detail">
           Any questions at all, just reply to this email or give me a call.<br>
           We'll present all offers clearly so you can compare and decide.
@@ -759,7 +629,7 @@
     <span class="footer-disclaimer">Indicative only. All rates subject to lender review and credit assessment.</span>
   </div>
 </div>
-<div class="generated-date">Prepared 19 June 2026 - Totally Rewards Limited</div>
+<div class="generated-date">Prepared 21 June 2026</div>
 
 </body>
 </html>
