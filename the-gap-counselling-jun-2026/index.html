@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<meta name="deal-id" content="1603">
+<title>Your Funding Options | The Gap Counselling Ltd | Risecap</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+  @font-face {
+    font-family: 'Feature Mono';
+    src: url('https://options.risecap.co.uk/fonts/feature-mono-regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Feature Mono';
+    src: url('https://options.risecap.co.uk/fonts/feature-mono-medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Feature Mono';
+    src: url('https://options.risecap.co.uk/fonts/feature-mono-bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --purple: #1A0047;
+    --purple-mid: #2D0070;
+    --yellow: #E4FE77;
+    --offwhite: #FFFCF8;
+    --surface: #ffffff;
+    --border: #EAE6F2;
+    --text-muted: #6B6480;
+    --text-dim: #9990B0;
+    --green: #1A7F5E;
+    --green-bg: #E8F8F2;
+    --amber: #B05C00;
+    --amber-bg: #FEF3E2;
+  }
+
+  html { font-size: 16px; }
+
+  body {
+    font-family: 'Montserrat', -apple-system, sans-serif;
+    background: var(--offwhite);
+    color: var(--purple);
+    min-height: 100vh;
+    line-height: 1.6;
+  }
+
+  .page { max-width: 720px; margin: 0 auto; background: var(--offwhite); }
+  .header-wrap { background: var(--purple); }
+  .header-inner { max-width: 720px; margin: 0 auto; }
+
+  .header { padding: 40px 48px 36px; }
+  .brand {
+    font-family: 'Feature Mono', 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    color: var(--yellow);
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    margin-bottom: 20px;
+    opacity: 0.8;
+  }
+  .header-intro {
+    font-size: 13px;
+    color: rgba(255,252,248,0.55);
+    margin-bottom: 6px;
+    font-style: italic;
+  }
+  .header-title {
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--offwhite);
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    margin-bottom: 14px;
+  }
+  .header-body {
+    font-size: 14px;
+    color: rgba(255,252,248,0.65);
+    line-height: 1.65;
+    max-width: 520px;
+  }
+  .header-body strong { color: rgba(255,252,248,0.9); font-weight: 500; }
+
+  .amount-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--yellow);
+    color: var(--purple);
+    font-family: 'Feature Mono', 'IBM Plex Mono', monospace;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 7px 14px;
+    border-radius: 5px;
+    margin-top: 20px;
+  }
+
+  /* HONEST NOTICE BANNER */
+  .notice-banner {
+    background: var(--amber-bg);
+    border-left: 3px solid var(--amber);
+    padding: 16px 20px;
+    border-radius: 0 8px 8px 0;
+    margin-bottom: 32px;
+  }
+  .notice-banner-title {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--amber);
+    margin-bottom: 6px;
+  }
+  .notice-banner-body {
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+
+  .main { padding: 36px 48px 48px; }
+
+  .section-head {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+    margin-top: 36px;
+  }
+  .section-head:first-child { margin-top: 0; }
+  .section-title {
+    font-family: 'Feature Mono', 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--text-dim);
+    white-space: nowrap;
+  }
+  .section-line { flex: 1; height: 1px; background: var(--border); }
+
+  /* LENDER CARDS */
+  .lenders { display: flex; flex-direction: column; gap: 14px; margin-bottom: 8px; }
+
+  .lender-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .lc-head {
+    padding: 20px 24px 16px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  .lc-name { font-size: 16px; font-weight: 600; color: var(--purple); letter-spacing: -0.01em; margin-bottom: 3px; }
+  .lc-type { font-size: 12px; color: var(--text-dim); }
+
+  .lc-badges { display: flex; gap: 6px; flex-wrap: wrap; justify-content: flex-end; flex-shrink: 0; }
+  .badge {
+    font-size: 10px;
+    font-weight: 500;
+    font-family: 'Feature Mono', 'IBM Plex Mono', monospace;
+    padding: 3px 9px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+  }
+  .badge-green { background: var(--green-bg); color: var(--green); }
+  .badge-purple { background: #EEEDFE; color: #4338CA; }
+  .badge-amber { background: var(--amber-bg); color: var(--amber); }
+
+  .lc-body { padding: 16px 24px 20px; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
+
+  .lc-stat-label {
+    font-size: 11px;
+    color: var(--text-dim);
+    margin-bottom: 3px;
+    font-family: 'Feature Mono', 'IBM Plex Mono', monospace;
+    letter-spacing: 0.04em;
+  }
+  .lc-stat-value { font-size: 15px; font-weight: 500; color: var(--purple); }
+  .lc-stat-note { font-size: 11px; color: var(--text-dim); margin-top: 2px; }
+
+  .lc-pitch {
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.6;
+    background: #FAFAF8;
+    padding: 14px 24px 18px;
+    border-top: 1px solid var(--border);
+  }
+
+  /* WHAT TO EXPECT */
+  .expect-list { display: flex; flex-direction: column; gap: 0; border: 1px solid var(--border); border-radius: 12px; overflow: hidden; background: var(--surface); }
+  .expect-step {
+    display: flex;
+    gap: 16px;
+    padding: 18px 22px;
+    border-bottom: 1px solid var(--border);
+    align-items: flex-start;
+  }
+  .expect-step:last-child { border-bottom: none; }
+  .expect-num {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: var(--purple);
+    color: var(--yellow);
+    font-family: 'Feature Mono', 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+  .expect-title { font-size: 14px; font-weight: 500; color: var(--purple); margin-bottom: 4px; }
+  .expect-desc { font-size: 13px; color: var(--text-muted); line-height: 1.55; }
+
+  /* DOCS */
+  .docs-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  .doc-item {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    color: var(--purple);
+  }
+  .doc-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--yellow); border: 1px solid var(--purple); flex-shrink: 0; }
+
+  /* COME BACK SECTION */
+  .comeback-box {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .comeback-head {
+    background: var(--purple);
+    padding: 18px 24px;
+  }
+  .comeback-head-title {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--offwhite);
+    margin-bottom: 4px;
+  }
+  .comeback-head-sub {
+    font-size: 12px;
+    color: rgba(255,252,248,0.55);
+  }
+  .comeback-items { padding: 4px 0; }
+  .comeback-item {
+    display: flex;
+    gap: 16px;
+    padding: 16px 24px;
+    border-bottom: 1px solid var(--border);
+    align-items: flex-start;
+  }
+  .comeback-item:last-child { border-bottom: none; }
+  .comeback-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    background: var(--yellow);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Feature Mono', 'IBM Plex Mono', monospace;
+    font-size: 13px;
+    color: var(--purple);
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+  .comeback-item-title { font-size: 14px; font-weight: 500; color: var(--purple); margin-bottom: 4px; }
+  .comeback-item-body { font-size: 13px; color: var(--text-muted); line-height: 1.55; }
+  .comeback-item-tag {
+    display: inline-block;
+    margin-top: 6px;
+    font-size: 10px;
+    font-family: 'Feature Mono', 'IBM Plex Mono', monospace;
+    color: var(--green);
+    background: var(--green-bg);
+    padding: 2px 8px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  /* WHY RISECAP */
+  .why-box {
+    background: var(--purple);
+    border-radius: 12px;
+    padding: 28px 30px;
+    margin-top: 36px;
+  }
+  .why-title { font-size: 16px; font-weight: 500; color: var(--offwhite); margin-bottom: 10px; }
+  .why-body { font-size: 13px; color: rgba(255,252,248,0.65); line-height: 1.7; }
+  .why-body strong { color: rgba(255,252,248,0.9); font-weight: 500; }
+
+  /* CONTACT */
+  .contact {
+    margin-top: 28px;
+    padding: 22px 24px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+  }
+  .contact-name { font-size: 15px; font-weight: 600; color: var(--purple); margin-bottom: 2px; }
+  .contact-role { font-size: 12px; color: var(--text-dim); margin-bottom: 8px; }
+  .contact-detail { font-size: 13px; color: var(--text-muted); line-height: 1.6; }
+  .contact-detail a { color: var(--purple); font-weight: 500; text-decoration: none; }
+  .contact-avatar {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: var(--yellow);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Feature Mono', 'IBM Plex Mono', monospace;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--purple);
+    flex-shrink: 0;
+  }
+
+  /* FOOTER */
+  .footer { background: var(--purple); margin-top: 0; }
+  .footer-inner {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 20px 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+  }
+  .footer-brand {
+    font-family: 'Feature Mono', 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    color: rgba(255,252,248,0.35);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  .footer-disclaimer {
+    font-size: 11px;
+    color: rgba(255,252,248,0.25);
+    line-height: 1.5;
+    text-align: right;
+    max-width: 360px;
+  }
+  .generated-date {
+    font-size: 10px;
+    color: rgba(255,252,248,0.2);
+    text-align: center;
+    padding: 8px 48px;
+    background: var(--purple);
+    font-family: 'Feature Mono', 'IBM Plex Mono', monospace;
+  }
+
+  @media (max-width: 600px) {
+    .header { padding: 28px 24px 28px; }
+    .header-title { font-size: 22px; }
+    .main { padding: 28px 24px 36px; }
+    .lc-head { flex-direction: column; gap: 10px; }
+    .lc-badges { justify-content: flex-start; }
+    .lc-body { grid-template-columns: 1fr 1fr; }
+    .docs-grid { grid-template-columns: 1fr; }
+    .contact { flex-direction: column; text-align: center; }
+    .footer-inner { flex-direction: column; text-align: center; padding: 20px 24px; }
+    .footer-disclaimer { text-align: center; max-width: none; }
+  }
+</style>
+</head>
+<body>
+
+<div class="header-wrap">
+  <div class="header-inner">
+    <div class="header">
+      <div class="brand">Risecap - Your funding options</div>
+      <div class="header-intro">Prepared for The Gap Counselling Ltd</div>
+      <div class="header-title">We've been to market for you.</div>
+      <div class="header-body">
+        We want to be straight with you: this is a <strong>challenging market to crack right now</strong>, and we're working with a short list of lenders who can realistically look at your situation. We've been thorough, and we want you to know exactly what's possible - and what isn't yet. <strong>We'll get feedback to you as quickly as we can</strong> and keep you updated every step of the way.
+      </div>
+      <div class="amount-pill">
+        Working capital - £10,000
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="page">
+  <div class="main">
+
+    <!-- NOTICE BANNER -->
+    <div class="notice-banner">
+      <div class="notice-banner-title">A note on where we are</div>
+      <div class="notice-banner-body">
+        The options below represent the lenders most likely to say yes given your current profile. The market for businesses at this stage - particularly where there's any credit history to explain - is genuinely limited. We've been honest with ourselves about what's realistic rather than sending you somewhere that would just decline and waste your time. If these don't come through, we have a clear picture of what would open more doors, and we're happy to talk through that with you.
+      </div>
+    </div>
+
+    <!-- LENDERS -->
+    <div class="section-head" style="margin-top: 0;">
+      <span class="section-title">Your shortlist</span>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="lenders">
+
+      <!-- Swishfund -->
+      <div class="lender-card">
+        <div class="lc-head">
+          <div>
+            <div class="lc-name">Lender A</div>
+            <div class="lc-type">Short-term business loan</div>
+          </div>
+          <div class="lc-badges">
+            <span class="badge badge-amber">Long shot</span>
+            <span class="badge badge-purple">Story-led</span>
+          </div>
+        </div>
+        <div class="lc-body">
+          <div>
+            <div class="lc-stat-label">Amount</div>
+            <div class="lc-stat-value">Up to £10,000</div>
+            <div class="lc-stat-note">Subject to assessment</div>
+          </div>
+          <div>
+            <div class="lc-stat-label">Decision</div>
+            <div class="lc-stat-value">7-10 days</div>
+            <div class="lc-stat-note">Manual underwriting</div>
+          </div>
+          <div>
+            <div class="lc-stat-label">Security</div>
+            <div class="lc-stat-value">Personal guarantee</div>
+            <div class="lc-stat-note">No asset required</div>
+          </div>
+        </div>
+        <div class="lc-pitch">
+          This lender assesses businesses on their filed accounts and trading story rather than purely on credit score - which is why they're the strongest fit here. Your profitability and growing revenue work in your favour. We'll present your situation clearly and let them make an informed decision. We won't pretend the outcome is certain, but this is the most credible route available right now.
+        </div>
+      </div>
+
+      <!-- Got Capital -->
+      <div class="lender-card">
+        <div class="lc-head">
+          <div>
+            <div class="lc-name">Lender B</div>
+            <div class="lc-type">Short-term business loan</div>
+          </div>
+          <div class="lc-badges">
+            <span class="badge badge-amber">Subject to enquiry</span>
+            <span class="badge badge-green">No personal guarantee</span>
+          </div>
+        </div>
+        <div class="lc-body">
+          <div>
+            <div class="lc-stat-label">Amount</div>
+            <div class="lc-stat-value">Up to £10,000</div>
+            <div class="lc-stat-note">Revenue-based sizing</div>
+          </div>
+          <div>
+            <div class="lc-stat-label">Decision</div>
+            <div class="lc-stat-value">24-48 hours</div>
+            <div class="lc-stat-note">Fast turnaround</div>
+          </div>
+          <div>
+            <div class="lc-stat-label">Security</div>
+            <div class="lc-stat-value">None required</div>
+            <div class="lc-stat-note">No personal guarantee</div>
+          </div>
+        </div>
+        <div class="lc-pitch">
+          This lender is specifically set up for businesses that traditional lenders have turned away, and credit history isn't a barrier for them. We need to have a quick conversation with them first to confirm your monthly revenue fits their criteria before submitting - we'll do that in the background and let you know.
+        </div>
+      </div>
+
+    </div>
+
+    <!-- WHAT TO EXPECT -->
+    <div class="section-head" style="margin-top: 40px;">
+      <span class="section-title">What happens from here</span>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="expect-list">
+      <div class="expect-step">
+        <div class="expect-num">1</div>
+        <div>
+          <div class="expect-title">We submit on your behalf</div>
+          <div class="expect-desc">We pull together everything the lenders need and present your business in the best light. You won't need to fill out multiple applications.</div>
+        </div>
+      </div>
+      <div class="expect-step">
+        <div class="expect-num">2</div>
+        <div>
+          <div class="expect-title">We come back to you quickly</div>
+          <div class="expect-desc">We aim to have initial feedback within a few days. We'll contact you as soon as we hear anything - no chasing required on your end.</div>
+        </div>
+      </div>
+      <div class="expect-step">
+        <div class="expect-num">3</div>
+        <div>
+          <div class="expect-title">We present any offers clearly</div>
+          <div class="expect-desc">If an offer comes back, we'll walk you through the full cost and terms so you can make a straightforward decision. No surprises.</div>
+        </div>
+      </div>
+      <div class="expect-step">
+        <div class="expect-num">4</div>
+        <div>
+          <div class="expect-title">We're honest if it doesn't work this time</div>
+          <div class="expect-desc">If neither lender comes through, we'll tell you exactly why and what would change the picture. There's a clear path forward and we'll map it out for you.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DOCS -->
+    <div class="section-head" style="margin-top: 40px;">
+      <span class="section-title">Documents we may need from you</span>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="docs-grid">
+      <div class="doc-item"><div class="doc-dot"></div>Last 6 months bank statements</div>
+      <div class="doc-item"><div class="doc-dot"></div>Filed accounts (year-end Sep 2025)</div>
+      <div class="doc-item"><div class="doc-dot"></div>Photo ID for each director</div>
+      <div class="doc-item"><div class="doc-dot"></div>Proof of address (directors)</div>
+    </div>
+
+    <!-- COME BACK WHEN -->
+    <div class="section-head" style="margin-top: 40px;">
+      <span class="section-title">When to come back to us</span>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="comeback-box">
+      <div class="comeback-head">
+        <div class="comeback-head-title">The Gap Counselling is a good business. Here's how to put it in a stronger borrowing position.</div>
+        <div class="comeback-head-sub">Focus on these over the next 6-12 months and you'll have significantly more options available to you.</div>
+      </div>
+      <div class="comeback-items">
+
+        <div class="comeback-item">
+          <div class="comeback-icon">01</div>
+          <div>
+            <div class="comeback-item-title">Build your monthly revenue consistency</div>
+            <div class="comeback-item-body">Your filed turnover tells a great story, but lenders also look at what's flowing through your account month to month. Getting your average monthly revenue above £5,000 consistently - and keeping it there for 3-6 months - opens up a much wider pool of lenders, including those who offer faster decisions and better rates.</div>
+            <span class="comeback-item-tag">Target: 6 months of consistent trading</span>
+          </div>
+        </div>
+
+        <div class="comeback-item">
+          <div class="comeback-icon">02</div>
+          <div>
+            <div class="comeback-item-title">Grow the account balance cushion</div>
+            <div class="comeback-item-body">Lenders check your average end-of-day account balance as a health signal. A stronger average balance - ideally a month's worth of outgoings - shows them the business isn't operating right on the edge. Even a modest improvement here makes a real difference to how applications are received.</div>
+            <span class="comeback-item-tag">Target: Average balance 1x monthly costs</span>
+          </div>
+        </div>
+
+        <div class="comeback-item">
+          <div class="comeback-icon">03</div>
+          <div>
+            <div class="comeback-item-title">Let the credit history age</div>
+            <div class="comeback-item-body">The previous company history is the main thing holding this back with traditional lenders. With every month of clean, positive trading under The Gap Counselling Ltd, that history carries less weight. Most lenders we work with look back 2-3 years - once the current business has a stronger track record behind it, the doors open considerably.</div>
+            <span class="comeback-item-tag">Target: 2 years clean trading history</span>
+          </div>
+        </div>
+
+        <div class="comeback-item">
+          <div class="comeback-icon">04</div>
+          <div>
+            <div class="comeback-item-title">Build on your next set of filed accounts</div>
+            <div class="comeback-item-body">Your 94% gross margin and increasing revenue trend are genuinely strong. Once your Sep 2026 accounts are filed - if they continue that trajectory - you'll have two years of growing, profitable accounts to put in front of lenders. That's a very different conversation, and the amount you can access grows substantially with it.</div>
+            <span class="comeback-item-tag">Target: Sep 2026 accounts filed</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- WHY RISECAP -->
+    <div class="why-box">
+      <div class="why-title">Why we've approached this the way we have</div>
+      <div class="why-body">
+        We could have sent you a longer list of lenders. But we've learned that submitting to lenders who are very unlikely to say yes <strong>wastes your time and adds unnecessary credit footprint</strong> to the business. So we've been selective - these are the two lenders we believe have the most realistic appetite for your situation right now.<br><br>
+        We're not going anywhere. <strong>When the time is right to come back, we'll have a much stronger case to put forward</strong> - and we'll be ready to move quickly. In the meantime, if anything changes or you have questions, just get in touch.
+      </div>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="contact">
+      <div>
+        <div class="contact-name">Michael</div>
+        <div class="contact-role">Funding Consultant - Risecap</div>
+        <div class="contact-detail">
+          Any questions at all, just reply to this email or give me a call.<br>
+          I'll be in touch as soon as I have feedback from the lenders.
+        </div>
+      </div>
+      <div class="contact-avatar">M</div>
+    </div>
+
+  </div>
+</div>
+
+<div class="footer">
+  <div class="footer-inner">
+    <span class="footer-brand">Risecap - Funding partners</span>
+    <span class="footer-disclaimer">Indicative only. All rates subject to lender review and credit assessment. Risecap acts as a funding partner, not a lender.</span>
+  </div>
+</div>
+<div class="generated-date">Prepared 22 June 2026</div>
+
+</body>
+</html>
