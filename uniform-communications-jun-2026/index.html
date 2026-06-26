@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<meta name="deal-id" content="1629">
+<title>Your Funding Options | Uniform Communications | Risecap</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+  @font-face {
+    font-family: 'Feature Mono';
+    src: url('https://options.risecap.co.uk/fonts/feature-mono-regular.ttf') format('truetype');
+    font-weight: 400; font-style: normal; font-display: swap;
+  }
+  @font-face {
+    font-family: 'Feature Mono';
+    src: url('https://options.risecap.co.uk/fonts/feature-mono-medium.ttf') format('truetype');
+    font-weight: 500; font-style: normal; font-display: swap;
+  }
+  @font-face {
+    font-family: 'Feature Mono';
+    src: url('https://options.risecap.co.uk/fonts/feature-mono-bold.ttf') format('truetype');
+    font-weight: 700; font-style: normal; font-display: swap;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --purple: #1A0047;
+    --purple-mid: #2D0070;
+    --yellow: #E4FE77;
+    --offwhite: #FFFCF8;
+    --surface: #ffffff;
+    --border: #EAE6F2;
+    --text-muted: #6B6480;
+    --text-dim: #9990B0;
+    --green: #1A7F5E;
+    --green-bg: #E8F8F2;
+    --amber: #B05C00;
+    --amber-bg: #FEF3E2;
+  }
+
+  html { font-size: 16px; }
+
+  body {
+    font-family: 'Montserrat', -apple-system, sans-serif;
+    background: var(--offwhite);
+    color: var(--purple);
+    min-height: 100vh;
+    line-height: 1.6;
+  }
+
+  .page { max-width: 720px; margin: 0 auto; background: var(--offwhite); }
+  .header-wrap { background: var(--purple); }
+  .header-inner { max-width: 720px; margin: 0 auto; }
+
+  .header { padding: 40px 48px 36px; }
+  .brand {
+    font-family: 'Feature Mono', 'IBM Plex Mono', monospace;
+    font-size: 10px; color: var(--yellow);
+    text-transform: uppercase; letter-spacing: 0.14em;
+    margin-bottom: 20px; opacity: 0.8;
+  }
+  .header-intro {
+    font-size: 13px; color: rgba(255,252,248,0.55);
+    margin-bottom: 6px; font-style: italic;
+  }
+  .header-title {
+    font-size: 28px; font-weight: 600; color: var(--offwhite);
+    letter-spacing: -0.02em; line-height: 1.2; margin-bottom: 14px;
+  }
+  .header-body {
+    font-size: 14px; color: rgba(255,252,248,0.65);
+    line-height: 1.65; max-width: 520px;
+  }
+  .header-body strong { color: rgba(255,252,248,0.9); font-weight: 500; }
+
+  .amount-pill {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--yellow); color: var(--purple);
+    font-family: 'Feature Mono', 'IBM Plex Mono', monospace;
+    font-size: 13px; font-weight: 500;
+    padding: 7px 14px; border-radius: 5px; margin-top: 20px;
+  }
+
+  .main { padding: 36px 48px 48px; }
+
+  .section-head {
+    display: flex; align-items: center; gap: 12px;
+    margin-bottom: 20px; margin-top: 36px;
+  }
+  .section-head:first-child { margin-top: 0; }
+  .section-title {
+    font-family: 'Feature Mono', 'IBM Plex Mono', monospace;
+    font-size: 10px; font-weight: 500;
+    text-transform: uppercase; letter-spacing: 0.12em;
+    color: var(--text-dim); white-space: nowrap;
+  }
+  .section-line { flex: 1; height: 1px; background: var(--border); }
+
+  .lenders { display: flex; flex-direction: column; gap: 14px; margin-bottom: 8px; }
+
+  .lender-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px; overflow: hidden;
+  }
+
+  .lc-head {
+    padding: 20px 24px 16px; border-bottom: 1px solid var(--border);
+    display: flex; justify-content: space-between;
+    align-items: flex-start; gap: 16px;
+  }
+  .lc-name { font-size: 16px; font-weight: 600; color: var(--purple); letter-spacing: -0.01em; margin-bottom: 3px; }
+  .lc-type { font-size: 12px; color: var(--text-dim); }
+
+  .lc-badges { display: flex; gap: 6px; flex-wrap: wrap; justify-content: flex-end; flex-shrink: 0; }
+  .badge {
+    font-size: 10px; font-weight: 500;
+    font-family: 'Feature Mono', 'IBM Plex Mono', monospace;
+    padding: 3px 9px; border-radius: 3px;
+    text-transform: uppercase; letter-spacing: 0.04em; white-space: nowrap;
+  }
+  .badge-green  { background: var(--green-bg); color: var(--green); }
+  .badge-purple { background: #EEEDFE; color: #4338CA; }
+  .badge-amber  { background: var(--amber-bg); color: var(--amber); }
+
+  .lc-body {
+    padding: 16px 24px 20px;
+    display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px;
+  }
+
+  .lc-stat-label {
+    font-size: 11px; color: var(--text-dim); margin-bottom: 3px;
+    font-family: 'Feature Mono', 'IBM Plex Mono', monospace; letter-spacing: 0.04em;
+  }
+  .lc-stat-value { font-size: 15px; font-weight: 500; color: var(--purple); }
+  .lc-stat-note  { font-size: 11px; color: var(--text-dim); margin-top: 2px; }
+
+  .lc-pitch {
+    font-size: 13px; color: var(--text-muted); line-height: 1.6;
+    background: #FAFAF8; padding: 14px 24px 18px;
+    border-top: 1px solid var(--border);
+  }
+
+  .expect-list {
+    display: flex; flex-direction: column;
+    border: 1px solid var(--border); border-radius: 12px;
+    overflow: hidden; background: var(--surface);
+  }
+  .expect-step {
+    display: flex; gap: 16px; padding: 18px 22px;
+    border-bottom: 1px solid var(--border); align-items: flex-start;
+  }
+  .expect-step:last-child { border-bottom: none; }
+  .expect-num {
+    width: 26px; height: 26px; border-radius: 50%;
+    background: var(--purple); color: var(--yellow);
+    font-family: 'Feature Mono', 'IBM Plex Mono', monospace;
+    font-size: 11px; display: flex; align-items: center;
+    justify-content: center; flex-shrink: 0; margin-top: 1px;
+  }
+  .expect-title { font-size: 14px; font-weight: 500; color: var(--purple); margin-bottom: 4px; }
+  .expect-desc  { font-size: 13px; color: var(--text-muted); line-height: 1.55; }
+
+  .why-box {
+    background: var(--purple); border-radius: 12px;
+    padding: 28px 30px; margin-top: 36px;
+  }
+  .why-title { font-size: 16px; font-weight: 500; color: var(--offwhite); margin-bottom: 10px; }
+  .why-body  { font-size: 13px; color: rgba(255,252,248,0.65); line-height: 1.7; }
+  .why-body strong { color: rgba(255,252,248,0.9); font-weight: 500; }
+
+  .contact {
+    margin-top: 28px; padding: 22px 24px;
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 12px; display: flex;
+    justify-content: space-between; align-items: center; gap: 16px;
+  }
+  .contact-name   { font-size: 15px; font-weight: 600; color: var(--purple); margin-bottom: 2px; }
+  .contact-role   { font-size: 12px; color: var(--text-dim); margin-bottom: 8px; }
+  .contact-detail { font-size: 13px; color: var(--text-muted); line-height: 1.6; }
+  .contact-avatar {
+    width: 52px; height: 52px; border-radius: 50%;
+    background: var(--yellow); display: flex;
+    align-items: center; justify-content: center;
+    font-family: 'Feature Mono', 'IBM Plex Mono', monospace;
+    font-size: 16px; font-weight: 500; color: var(--purple); flex-shrink: 0;
+  }
+
+  .footer { background: var(--purple); }
+  .footer-inner {
+    max-width: 720px; margin: 0 auto; padding: 20px 48px;
+    display: flex; justify-content: space-between; align-items: center; gap: 16px;
+  }
+  .footer-brand {
+    font-family: 'Feature Mono', 'IBM Plex Mono', monospace;
+    font-size: 10px; color: rgba(255,252,248,0.35);
+    letter-spacing: 0.1em; text-transform: uppercase;
+  }
+  .footer-disclaimer {
+    font-size: 11px; color: rgba(255,252,248,0.25);
+    line-height: 1.5; text-align: right; max-width: 360px;
+  }
+  .generated-date {
+    font-size: 10px; color: rgba(255,252,248,0.2);
+    text-align: center; padding: 8px 48px;
+    background: var(--purple);
+    font-family: 'Feature Mono', 'IBM Plex Mono', monospace;
+  }
+
+  @media (max-width: 600px) {
+    .header { padding: 28px 24px 28px; }
+    .header-title { font-size: 22px; }
+    .main { padding: 28px 24px 36px; }
+    .lc-head { flex-direction: column; gap: 10px; }
+    .lc-badges { justify-content: flex-start; }
+    .lc-body { grid-template-columns: 1fr 1fr; }
+    .contact { flex-direction: column; text-align: center; }
+    .footer-inner { flex-direction: column; text-align: center; padding: 20px 24px; }
+    .footer-disclaimer { text-align: center; max-width: none; }
+  }
+</style>
+</head>
+<body>
+
+<div class="header-wrap">
+  <div class="header-inner">
+    <div class="header">
+      <div class="brand">Risecap - Your funding options</div>
+      <div class="header-intro">Prepared for Uniform Communications</div>
+      <div class="header-title">Here's what we've found for you.</div>
+      <div class="header-body">
+        Nick, we've worked through your position properly. <strong>The fastest route is a conversation with your existing lender</strong> - we're making that call as a priority.<br><br>
+        In parallel we've put together a strong shortlist of alternatives - a mix of established lenders who know this kind of business, plus a selective invoice finance option that lets you draw against specific invoices without adding another fixed monthly repayment to the balance sheet.
+      </div>
+      <div class="amount-pill">&#163;150,000 - Uniform Communications Limited</div>
+    </div>
+  </div>
+</div>
+
+<div class="page">
+  <div class="main">
+
+    <div class="section-head">
+      <span class="section-title">Your shortlist</span>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="lenders">
+
+      <!-- 1. Shawbrook / Playter -->
+      <div class="lender-card">
+        <div class="lc-head">
+          <div>
+            <div class="lc-name">Shawbrook / Playter</div>
+            <div class="lc-type">Unsecured term loan - tranche reinstatement</div>
+          </div>
+          <div class="lc-badges">
+            <span class="badge badge-green">First move</span>
+            <span class="badge badge-green">Fastest route</span>
+          </div>
+        </div>
+        <div class="lc-body">
+          <div>
+            <div class="lc-stat-label">Amount</div>
+            <div class="lc-stat-value">&#163;150,000</div>
+            <div class="lc-stat-note">Reinstatement of expired second tranche</div>
+          </div>
+          <div>
+            <div class="lc-stat-label">Rate indicative</div>
+            <div class="lc-stat-value">From 10% pa</div>
+            <div class="lc-stat-note">Post-merger terms to be confirmed</div>
+          </div>
+          <div>
+            <div class="lc-stat-label">Term</div>
+            <div class="lc-stat-value">Up to 60 months</div>
+            <div class="lc-stat-note">Flexible repayment</div>
+          </div>
+        </div>
+        <div class="lc-pitch">
+          Your existing lender holds your full file and the first &#163;200k is running cleanly - first repayment landed on 22 June. We're going back to them to ask whether the expired &#163;150k can be reinstated under the post-merger structure. If yes, this is the quickest path and avoids adding a new lender relationship entirely.
+        </div>
+      </div>
+
+      <!-- 2. Funding Circle -->
+      <div class="lender-card">
+        <div class="lc-head">
+          <div>
+            <div class="lc-name">Funding Circle</div>
+            <div class="lc-type">Unsecured term loan - up to 6 years</div>
+          </div>
+          <div class="lc-badges">
+            <span class="badge badge-green">Fast decision</span>
+          </div>
+        </div>
+        <div class="lc-body">
+          <div>
+            <div class="lc-stat-label">Amount</div>
+            <div class="lc-stat-value">&#163;150,000</div>
+            <div class="lc-stat-note">Well within EBITDA-supported capacity</div>
+          </div>
+          <div>
+            <div class="lc-stat-label">Rate indicative</div>
+            <div class="lc-stat-value">6.9% - 24.40% pa</div>
+            <div class="lc-stat-note">Final rate confirmed on offer</div>
+          </div>
+          <div>
+            <div class="lc-stat-label">Term</div>
+            <div class="lc-stat-value">Up to 72 months</div>
+            <div class="lc-stat-note">Flexible repayment</div>
+          </div>
+        </div>
+        <div class="lc-pitch">
+          They assess primarily on EBITDA - your figures support well over &#163;150k of capacity and a 27-year trading history with a blue-chip client list lands well with their underwriters. Decision comes back quickly via their portal once we submit.
+        </div>
+      </div>
+
+      <!-- 3. iwoca -->
+      <div class="lender-card">
+        <div class="lc-head">
+          <div>
+            <div class="lc-name">iwoca</div>
+            <div class="lc-type">Unsecured term loan - up to 5 years</div>
+          </div>
+          <div class="lc-badges">
+            <span class="badge badge-purple">Flexible UW</span>
+          </div>
+        </div>
+        <div class="lc-body">
+          <div>
+            <div class="lc-stat-label">Amount</div>
+            <div class="lc-stat-value">&#163;150,000</div>
+            <div class="lc-stat-note">Well within their range for your turnover</div>
+          </div>
+          <div>
+            <div class="lc-stat-label">Rate indicative</div>
+            <div class="lc-stat-value">From 12% pa</div>
+            <div class="lc-stat-note">Final rate confirmed on offer</div>
+          </div>
+          <div>
+            <div class="lc-stat-label">Term</div>
+            <div class="lc-stat-value">Up to 60 months</div>
+            <div class="lc-stat-note">Flexible repayment</div>
+          </div>
+        </div>
+        <div class="lc-pitch">
+          A well-established fintech lender with a flexible underwriting approach and strong appetite for B2B service businesses. Your trading history and debtor book quality play well here. Document-led process but decisions are reliable and come back quickly once the application is in.
+        </div>
+      </div>
+
+      <!-- 4. Nucleus -->
+      <div class="lender-card">
+        <div class="lc-head">
+          <div>
+            <div class="lc-name">Nucleus</div>
+            <div class="lc-type">Unsecured term loan - up to 6 years</div>
+          </div>
+          <div class="lc-badges">
+            <span class="badge badge-purple">Up to &#163;500k</span>
+          </div>
+        </div>
+        <div class="lc-body">
+          <div>
+            <div class="lc-stat-label">Amount</div>
+            <div class="lc-stat-value">&#163;150,000</div>
+            <div class="lc-stat-note">Within their &#163;500k capacity</div>
+          </div>
+          <div>
+            <div class="lc-stat-label">Rate indicative</div>
+            <div class="lc-stat-value">From 14.5% pa</div>
+            <div class="lc-stat-note">Subject to credit review</div>
+          </div>
+          <div>
+            <div class="lc-stat-label">Term</div>
+            <div class="lc-stat-value">Up to 72 months</div>
+            <div class="lc-stat-note">Longest term option on the shortlist</div>
+          </div>
+        </div>
+        <div class="lc-pitch">
+          Nucleus can offer the longest repayment term on this shortlist, which keeps monthly repayments lower if that matters for the cashflow picture. Their underwriting process is straightforward and the clean payment record on your existing facilities helps.
+        </div>
+      </div>
+
+      <!-- 5. Momenta Finance -->
+      <div class="lender-card">
+        <div class="lc-head">
+          <div>
+            <div class="lc-name">Momenta Finance</div>
+            <div class="lc-type">Unsecured term loan</div>
+          </div>
+          <div class="lc-badges">
+            <span class="badge badge-green">Strong track record</span>
+          </div>
+        </div>
+        <div class="lc-body">
+          <div>
+            <div class="lc-stat-label">Amount</div>
+            <div class="lc-stat-value">&#163;150,000</div>
+            <div class="lc-stat-note">Subject to assessment</div>
+          </div>
+          <div>
+            <div class="lc-stat-label">Rate indicative</div>
+            <div class="lc-stat-value">5% - 19% pa</div>
+            <div class="lc-stat-note">Final rate confirmed on offer</div>
+          </div>
+          <div>
+            <div class="lc-stat-label">Underwriting</div>
+            <div class="lc-stat-value">DSCR-led</div>
+            <div class="lc-stat-note">Cashflow and serviceability focused</div>
+          </div>
+        </div>
+        <div class="lc-pitch">
+          Momenta's underwriting is built around debt service coverage - they want to see that the business can comfortably service what it owes. Your organic monthly revenue and EBITDA position support that case well. Rate and terms are confirmed at offer stage, and we'll present anything that comes back alongside the others for a clean comparison.
+        </div>
+      </div>
+
+      <!-- 6. Triver -->
+      <div class="lender-card">
+        <div class="lc-head">
+          <div>
+            <div class="lc-name">Triver</div>
+            <div class="lc-type">Selective invoice finance - draw against specific invoices</div>
+          </div>
+          <div class="lc-badges">
+            <span class="badge badge-green">No PG required</span>
+            <span class="badge badge-purple">No fixed repayment</span>
+          </div>
+        </div>
+        <div class="lc-body">
+          <div>
+            <div class="lc-stat-label">Facility up to</div>
+            <div class="lc-stat-value">&#163;700,000</div>
+            <div class="lc-stat-note">Subject to eligible debtor book</div>
+          </div>
+          <div>
+            <div class="lc-stat-label">Rate indicative</div>
+            <div class="lc-stat-value">0.075% per day</div>
+            <div class="lc-stat-note">On drawn amounts only</div>
+          </div>
+          <div>
+            <div class="lc-stat-label">Setup</div>
+            <div class="lc-stat-value">~10 minutes</div>
+            <div class="lc-stat-note">No long-term commitment</div>
+          </div>
+        </div>
+        <div class="lc-pitch">
+          Rather than a fixed-term loan, Triver lets you draw against specific UK invoices when you need to - you only pay for what you use and repayment happens naturally when your client pays. No personal guarantee required and no long-term commitment. A good fit if the cashflow gap is driven by timing on large receipts rather than an ongoing shortfall.
+        </div>
+      </div>
+
+    </div>
+
+    <!-- WHAT HAPPENS FROM HERE -->
+    <div class="section-head" style="margin-top: 40px;">
+      <span class="section-title">What happens from here</span>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="expect-list">
+      <div class="expect-step">
+        <div class="expect-num">1</div>
+        <div>
+          <div class="expect-title">Shawbrook / Playter conversation - this week</div>
+          <div class="expect-desc">We're calling them as a priority to ask whether the expired &#163;150k tranche can be reinstated post-merger. If yes, this is the fastest and simplest route. We'll have an answer for you quickly.</div>
+        </div>
+      </div>
+      <div class="expect-step">
+        <div class="expect-num">2</div>
+        <div>
+          <div class="expect-title">Parallel submissions</div>
+          <div class="expect-desc">We'll submit to all lenders in parallel to get formal offers on the table, then present them side by side so you can compare and choose.</div>
+        </div>
+      </div>
+      <div class="expect-step">
+        <div class="expect-num">3</div>
+        <div>
+          <div class="expect-title">Offers compared, you decide</div>
+          <div class="expect-desc">We'll lay out every formal offer clearly - rate, term, total cost, monthly repayment - so the decision is straightforward. We'll tell you what we think and why, and you choose what's right for the business.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- WHY RISECAP -->
+    <div class="why-box">
+      <div class="why-title">Why we've approached this the way we have</div>
+      <div class="why-body">
+        We started with Shawbrook / Playter because reinstatement is almost always faster and less costly than a fresh application - they know the business and the first drawdown is running cleanly. That conversation happens before anything else goes out.<br><br>
+        The alternatives on this shortlist are genuinely strong. Funding Circle and iwoca are fast-moving and well-proven in our book. Nucleus gives you the longest term option if keeping the monthly repayment low is a priority. Momenta's cashflow-focused underwriting suits a business with your revenue profile. And Triver sits apart as a different product altogether - worth keeping in mind if the gap turns out to be a timing issue on large receipts rather than an ongoing need.<br><br>
+        <strong>We haven't included every lender we assessed.</strong> A handful were ruled out for specific eligibility reasons - wrong minimum, underwriting patterns that don't fit right now, or cost. That's the job: filtering so you only see options that can actually deliver.
+      </div>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="contact">
+      <div>
+        <div class="contact-name">Tony Jaiyeola</div>
+        <div class="contact-role">Funding Consultant - Risecap</div>
+        <div class="contact-detail">
+          Any questions at all, just reply to this email or give me a call.<br>
+          We'll present all offers clearly so you can compare and decide.
+        </div>
+      </div>
+      <div class="contact-avatar">TJ</div>
+    </div>
+
+  </div>
+</div>
+
+<div class="footer">
+  <div class="footer-inner">
+    <span class="footer-brand">Risecap - Funding partners</span>
+    <span class="footer-disclaimer">Indicative only. All rates subject to lender review and credit assessment.</span>
+  </div>
+</div>
+<div class="generated-date">Prepared 23 June 2026</div>
+
+</body>
+</html>
